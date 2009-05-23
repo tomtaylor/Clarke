@@ -7,6 +7,18 @@ Clarke is a small OS X application which triangulates your location using [Skyho
 
 The latest version of Clarke is always available from [tomtaylor.co.uk/projects/clarke](http://tomtaylor.co.uk/projects/clarke/).
 
+Known Bugs
+----------
+
+* None at the moment
+
+Features It Would Be Nice To Have
+---------------------------------
+
+* The location and Fire Eagle status is a bit difficult to understand, and could do with an overhaul
+* A new icon would be nice
+* Ability to have update multiple location services, including POSTing to a custom URL
+
 Installation
 ------------
 
@@ -45,4 +57,6 @@ Some code is used under license from elsewhere:
 
 * wpsapi.h & libwpsapi.dylib are used under license from Skyhook Wireless.
 * RHSystemIdleTimer is licensed under LGPL from Ryan Homer.
-* DSClickableURLTextField is from Night Productions.
+* DSClickableURLTextField from Night Productions.
+* OAuthConsumer from Kaboomerang LLC.
+* NSDate+Helper from Billy Gray.
