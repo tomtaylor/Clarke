@@ -1,20 +1,20 @@
 Clarke
 ======
 
-Clarke is a small OS X application which triangulates your location using Skyhook's API, and uses that to update Fire Eagle.
+Clarke is a small OS X application which triangulates your location using [Skyhook's](http://www.skyhookwireless.com/) API, and uses that to update [Fire Eagle](http://fireeagle.yahoo.net/).
 
-The latest version of Clarke is always available from tomtaylor.co.uk/projects/clarke.
+The latest version of Clarke is always available from [tomtaylor.co.uk/projects/clarke](http://tomtaylor.co.uk/projects/clarke/).
 
 Installation
 ------------
 
 If you want to build your own version of Clarke, you need to know the following.
 
-First, Tom Taylor has an agreement with Skyhook where he won't charge if they don't charge. 
+First, [Tom Taylor](http://tomtaylor.co.uk) has an agreement with Skyhook where he won't charge if they don't charge. Which is very nice of them.
 
-Developer API keys will perform location updates without registration. However because Clarke has been released to the wider world, it performs user registration inside the application on first run. This will fail for you, because Skyhook need to enable your API key for user registration.
+Skyhook developer API keys can perform location updates without registration, for a small number of users. However because Clarke has been released to the wider world, it needs to perform individual user registration inside the application on first run. This will fail for you, because Skyhook restrict which API keys can register users.
 
-Get yourself an API key from Skyhook. Comment out the user registration process in LocationController.m. Create the file 'SkyhookApiKey.h' and set the following define statements:
+To make it for development, get yourself an API key from Skyhook. Comment out the user registration process in LocationController.m. Create the file 'SkyhookApiKey.h' and set the following define statements:
 
     #define SKYHOOK_MASTER_USERNAME "username"
     #define SKYHOOK_MASTER_REALM "realm"
