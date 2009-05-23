@@ -3,6 +3,8 @@ Clarke
 
 Clarke is a small OS X application which triangulates your location using [Skyhook's](http://www.skyhookwireless.com/) API, and uses that to update [Fire Eagle](http://fireeagle.yahoo.net/).
 
+![Clarke screenshot](http://farm4.static.flickr.com/3552/3546261927_ba63dd4ffc_o.png)
+
 The latest version of Clarke is always available from [tomtaylor.co.uk/projects/clarke](http://tomtaylor.co.uk/projects/clarke/).
 
 Installation
