@@ -174,6 +174,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
+				E24BDBF70FB777080065CCD3 /* Security.framework */,
 				E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */,
 				E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */,
 				E290C4300FA8F6050093018D /* Apple80211.framework */,
@@ -243,8 +245,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
-				E24BDBF70FB777080065CCD3 /* Security.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
