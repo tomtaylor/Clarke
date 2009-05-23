@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict/EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+<title>DSClickableURLTextField Reference</title>
+<style type="text/css">
+	body { font-family:'Lucida Grande', Geneva, Helvetica, Arial, sans-serif; font-size:13px; background:#a3a8bc; }
+	#bodyCont { width:85%; margin-left:auto; margin-right:auto; background:#ededed; padding:2ex;  }
+	
+	h1 { text-align:center; font-size:24pt; font-weight:700; }
+	h2 { font-size:24px; font-weight:700;  margin-top:45px;}
+	h3 { font-size:16px; font-weight:700;  margin-bottom:2px; margin-top:0px; }
+	h4 { font-weight:700;  font-size:14px; margin-top:1em; margin-bottom:0px; }
+	em { font-family:Helvetica, Verdana, serif; font-size:13px; font-style:oblique; }
+	strong { font-weight:700; }
+	p { margin-bottom:0px;  }
+	code { border:1px solid gray; margin-left:15px; margin-top:5px; margin-bottom:5px; padding:10px; background:#e3e3ed; font-family:Monaco, Courier, 'Courier New', monospace; font-size:12px; display:block; width:50%; }
+	
+	a:link { font-size:11px; font-family:Monaco, Courier, 'Courier New', monospace; color:#0338bc; text-decoration:none; }
+	a:link:hover { text-decoration:underline; }
+	a:visited { font-size:11px; font-family:Monaco, Courier, 'Courier New', monospace; color:#c20000; text-decoration:none; }
+	a:visited:hover { text-decoration:underline; }
+	
+	div.declaration { border:1px solid gray; margin-top:15px; margin-bottom:15px; padding:10px;  background:#e3e3ed; }
+	div.Method { font-size:12px; font-family:Monaco, monospace; margin-bottom:10px; margin-top:10px; }
+	div.inParam {font-family:Helvetica, Verdana, serif; font-size:13px;  font-style:oblique; margin-left:1em; margin-top:.5ex;  }
+	
+	div.table { border-top:1px solid gray;  border-left:1px solid gray; border-right:1px solid gray; width:40em;}
+	div.rowBlue { border-bottom:1px solid gray;  background:#e3e3ed;  padding-top:.5em; padding-bottom:.5em; }
+	div.row { border-bottom:1px solid gray; background:#f5f5f5; padding-top:.5em; padding-bottom:.5em; }
+	div.typeCol { display:inline-block; width:100px; padding-left:5px; vertical-align:top; }
+	div.valCol { display:inline-block; text-align:left; padding-left:5px; padding-right:10px; }
+	
+	div.tasks { background:#e5e5e9; width:20em; border:1px solid gray; padding-left:15px; padding-top:5px; padding-right:15px; padding-bottom:5px; }
+	
+	.del { font-size:11px; font-style:oblique; color:green; }
+	.keyword { color:#cf00bf; }
+	
+	div.tasks h3 { margin-left:-8px; }
+	div.declaration h3 { font-size:19px; font-weight:700;  margin-top:0px; }
+	div.declaration a:link { margin-left:1em; }
+	div.Method a:link { margin-left:0px; }
+	div.inParam p { margin-left:1em; margin-top:0px; font-style:normal; font-family:'Lucida Grande', Geneva, Helvetica, Arial, sans-serif; font-size:13px; }
+	div.declaration p { margin-top:.5em; }
+</style>
+
+</head>
+
+<body>
+
+<div id="bodyCont">
+
+<h1>DSClickableURLTextField Class Reference</h1>
+<br /><br /><br /><br />
+<div class="table">
+	<div class="rowBlue">
+		<div class="typeCol"><strong>Inherits from</strong></div>
+		<div class="valCol"><a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTextField_Class/Reference/Reference.html">NSTextField</a> : <a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSControl_Class/Reference/Reference.html#//apple_ref/occ/cl/NSControl">NSControl</a> : <a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSView_Class/Reference/Reference.html#//apple_ref/occ/cl/NSView">NSView</a> : <a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSResponder_Class/Reference/Reference.html#//apple_ref/occ/cl/NSResponder">NSResponder</a> : <a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/occ/cl/NSObject">NSObject</a></div>
+	</div>
+	<div class="row">
+		<div class="typeCol"><strong>Conforms to</strong></div>
+		<div class="valCol"><a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Protocols/NSCoding_Protocol/Reference/Reference.html#//apple_ref/occ/intf/NSCoding">NSCoding (NSResponder)</a><br /><a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intf/NSObject">NSObject (NSObject)</a></div>
+	</div>
+	<div class="rowBlue">
+		<div class="typeCol"><strong>Author</strong></div>
+		<div class="valCol"><a href="mailto:darkshadow@nightproductions.net">Darkshadow</a></div>
+	</div>
+	<div class="row">
+		<div class="typeCol"><strong>Download URL</strong></div>
+		<div class="valCol"><a href="http://www.nightproductions.net/developer.htm">http://www.nightproductions.net/developer.htm</a></div>
+	</div>
+</div>
+<br /><br />
+
+<div class="declaration" style="width:12em;">
+	<a href="#Overview">Overview</a><br />
+	<a href="#Tasks">Tasks</a><br />
+	<a href="#Instance">Instance Methods</a><br />
+	<a href="#Delegate">Delegate Methods</a><br />
+	<a href="#Version">Version History</a><br />
+</div>
+
+<h2><a name="Overview">Overview</a></h2>
+<hr/>
+<p>DSClickableURLTextField is a subclass of NSTextField that does one thing: allow links to be clicked on and opened.</p>
+<p>To use this class, all you need to do is set the text field's attributed string value, with some portion of it being a link, and the text field will do the rest.  You'll get the &ldquo;pointy hand&rdquo; cursor over the link, and clicking on it will open that link.</p>
+<p>Note that the class only works if it is non-editable and non-selectable.  This is setup by default, but I wanted to mention it so nobody wastes time trying to figure out why the text field is acting the way it is.</p>
+
+<h2><a name="Tasks">Tasks</a></h2>
+<hr />
+<br />
+<div class="tasks">
+	<h3>Working with cursor rects</h3>
+	<a href="#resetCursorRects" title="Resets the cursor rects used to show cursor over links.">&mdash; resetCursorRects</a><br />
+	<br />
+	<h3>Working With Links</h3>
+	<a href="#canCopyURLs" title="Returns if the text field allows copying of URLs to the clipboard.">&mdash; canCopyURLs</a><br />
+	<a href="#setCanCopyURLs" title="Sets if the text field allows copying of URLs to the clipboard.">&mdash; setCanCopyURLs:</a><br />
+	<a href="#copyURL" title="Action used to copy an URL to the clipboard.">&mdash; copyURL:</a><br />
+	<a href="#urlAtMouse" title="Returns the link at the given mouse coordinates.">&mdash; urlAtMouse:</a><br />
+	<a href="#textFieldOpenURL" title="Lets the text field's delegate handle an URL.">&mdash; textField:openURL:</a> <span class="del">(delegate method)</span><br />
+	<br />
+	<h3>Setting the text field's contents</h3>
+	<a href="#setAttributedStringValue" title="Sets the text field's attributed string value.">&mdash; setAttributedStringValue:</a><br />
+	<a href="#setStringValue" title="Sets the text field's string value.">&mdash; setStringValue:</a><br />
+</div>
+
+<h2><a name="Instance">Instance Methods</a></h2>
+<hr />
+
+<div class="declaration">
+	<h3><a name="canCopyURLs">canCopyURLs</a></h3>
+	<p>Returns if the text field allows copying of URLs to the clipboard.</p>
+	<div class="Method">&mdash; (<span class="keyword">BOOL</span>)canCopyURLs</div>
+	<h4>Return Value</h4>
+	<p>If the text field allows copying of URLs, returns <span class="keyword">YES</span>, otherwise returns <span class="keyword">NO</span>.</p>
+	<h4>Discussion</h4>
+	<p>If the text field allows copying of URLs, it will pop up a menu allowing the user to copy the URL to the clipboard.</p>
+	<p>By default, this is set to <span class="keyword">NO</span>.</p>
+	<h4>See Also</h4>
+	<a href="#setCanCopyURLs">&mdash; setCanCopyURLs:</a><br />
+</div>
+
+<div class="declaration">
+	<h3><a name="copyURL">copyURL:</a></h3>
+	<p>Action used to copy an URL to the clipboard.</p>
+	<div class="Method">&mdash; (<span class="keyword">void</span>)copyURL:(<span class="keyword">id</span>)<em>sender</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">sender
+		<p>The menu item the user selected in the pop up menu.</p>
+	</div>
+	<h4>Discussion</h4>
+	<p>This is the action method called by the &ldquo;Copy URL&rdquo; menu item in the pop up menu shown to the user.  You should never call this method directly &mdash; the URL is set as the menu item's represented object and is referenced that way.</p>
+	<h4>See Also</h4>
+	<a href="#canCopyURLs">&mdash; canCopyURLs</a><br />
+	<a href="#setCanCopyURLs">&mdash; setCanCopyURLs</a><br />
+</div>
+
+<div class="declaration">
+	<h3><a name="resetCursorRects">resetCursorRects</a></h3>
+	<p>Resets the cursor rects used to show the cursor over links.</p>
+	<div class="Method">&mdash; (<span class="keyword">void</span>)resetCursorRects</div>
+	<h4>Discussion</h4>
+	<p>Resets the cursor rects used to show the &ldquo;pointy hand&rdquo; cursor over links.  Note that unless the text field is empty or you're running on 10.2 or earlier, this method doesn't call to <span class="keyword">super</span>.</p>
+	<p>This method is called automatically; there should be no need to call it directly.</p>
+</div>
+
+<div class="declaration">
+	<h3><a name="setAttributedStringValue">setAttributedStringValue:</a></h3>
+	<p>Sets the text field's attributed string value.</p>
+	<div class="Method">&mdash; (<span class="keyword">void</span>)setAttributedStringValue:(<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Classes/NSAttributedString_Class/Reference/Reference.html">NSAttributedString</a> *)<em>aStr</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">aStr
+		<p>The attributed string you wish the text field to display.</p>
+	</div>
+	<h4>Discussion</h4>
+	<p>This method sets the attributed string value and resets the text field's cursor rects.</p>
+	<h4>See Also</h4>
+	<a href="#setStringValue">&mdash; setStringValue:</a><br />
+</div>
+
+<div class="declaration">
+	<h3><a name="setCanCopyURLs">setCanCopyURLs:</a></h3>
+	<p>Sets if the text field will allow copying of URLs to the clipboard.</p>
+	<div class="Method">&mdash; (<span class="keyword">void</span>)setCanCopyURLS:(<span class="keyword">BOOL</span>)<em>aFlag</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">aFlag
+		<p>If <span class="keyword">YES</span>, the text field will allow copying URLs to the clipboard.</p>
+	</div>
+	<h4>See Also</h4>
+	<a href="#canCopyURLs">&mdash; canCopyURLs</a><br />
+</div>
+
+<div class="declaration">
+	<h3><a name="setStringValue">setStringValue:</a></h3>
+	<p>Sets the text field's string value.</p>
+	<div class="Method">&mdash; (<span class="keyword">void</span>)setStringValue:(<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html">NSString</a> *)<em>aStr</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">aStr
+		<p>The string you wish the text field to display.</p>
+	</div>
+	<h4>Discussion</h4>
+	<p>This method converts the string to an attributed string, then calls <a href="#setAttributedStringValue" style="margin-left:0px;">&mdash;setAttributedStringValue:</a> with it.</p>
+	<p>Note that if you set a simple string value, the text field will have no links.</p>
+	<h4>See Also</h4>
+	<a href="#setAttributedStringValue">&mdash; setAttributedStringValue:</a><br />
+</div>
+
+<div class="declaration">
+	<h3><a name="urlAtMouse">urlAtMouse:</a></h3>
+	<p>Returns the link at the given mouse coordinates.</p>
+	<div class="Method">&mdash; (<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html">NSURL</a> *)urlAtMouse:(<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSEvent_Class/Reference/Reference.html">NSEvent</a> *)<em>mouseEvent</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">mouseEvent
+		<p>The mouse event that generated the event.</p>
+	</div>
+	<h4>Return Value</h4>
+	<p>Returns the link under the mouse position, or <span class="keyword">nil</span> if there is no link at that position.</p>
+	<h4>Discussion</h4>
+	<p>This method must only be called by -mouseDown: or -mouseUp:, never directly.</p>
+</div>
+
+<h2><a name="Delegate">Delegate Methods</a></h2>
+<hr />
+
+<div class="declaration">
+	<h3><a name="textFieldOpenURL">textField:openURL:</a></h3>
+	<p>Lets the text field's delegate handle an URL.</p>
+	<div class="Method">&mdash; (<span class="keyword">BOOL</span>)textField:(<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTextField_Class/Reference/Reference.html">NSTextField</a> *)<em>textField</em> openURL:(<a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html">NSURL</a> *)<em>anURL</em></div>
+	<h4>Parameters</h4>
+	<div class="inParam">textField
+		<p>The text field being clicked on.</p>
+	</div>
+	<div class="inParam">anURL
+		<p>The link being clicked on.</p>
+	</div>
+	<h4>Return Value</h4>
+	<p>If the delegate handles the URL, return <span class="keyword">YES</span> otherwise return <span class="keyword">NO</span>.</p>
+	<h4>Discussion</h4>
+	<p>You can use this method to handle custom URL schemes or open an URL in a different manner than the default (passing it to <a href="file:///Developer/ADC%20Reference%20Library/documentation/Cocoa/Reference/ApplicationKit/Classes/NSWorkspace_Class/Reference/Reference.html" style="margin-left:0px;">NSWorkspace</a> to open the URL).</p>
+</div>
+
+<h2><a name="Version">Version History</a></h2>
+<hr />
+<br />
+
+<div class="table">
+	<div class="rowBlue">
+		<div class="typeCol" style="width:3em;">0.3</div>
+		<div class="valCol" style="margin-left:4em;">May 25 2007<br />
+		Changes by Jens Miltner:
+			<ul>
+				<li>Fixed a problem with the text storage and the text field's attributed string value having different lengths, causing range exceptions.</li>
+				<li>Added a delegate method allowing custom handling of URLs.</li>
+				<li>Tracks initially clicked URL at -mouseDown: to avoid situations where dragging would end up in a different URL at -mouseUp:, opening that URL.  This includes situations where the user clicks on an empty area of the text field, drags the mouse, and ends up on top of a link, which would then erroneously open that link.</li>
+				<li>Fixed to allow string links to work as well as URL links.</li>
+			</ul>
+			Changes by Darkshadow:
+			<ul>
+				<li>Overrode -initWithCoder:, -initWithFrame:, and -awakeFromNib to explicitly set the text field to non-editable and non-selectable.  Now you don't need to remember to set this up, and the class will work correctly regardless.</li>
+				<li>Added in the ability for the user to copy URLs to the clipboard.  Note that this is off by default.</li>
+				<li>Some code clean up.</li>
+			</u>
+		</div>
+	</div>
+	<div class="row">
+		<div class="typeCol" style="width:auto;">0.2</div>
+		<div class="valCol"style="margin-left:4em;">August 30, 2006
+			<ul>
+				<li>Fixed a bug where cursor rects would be enabled even if the text field wasn't visible. i.e. it's in a scroll view, but the text field isn't scrolled to where it's visible.</li>
+				<li>Fixed an issue where -mouseUp: wouldn't be called and so clicking on the URL would have no effect when the text field is a subview of a split view (and possibly other views).  I did this by <strong>not</strong> calling <span class="keyword">super</span> in -mouseDown:.  Since the text field is non-editable and non-selectable, I don't believe this will cause any problems.</li>
+				<li>Fixed the fact that it was using the text field's bounds rather than the cell's bounds to calculate rects.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="rowBlue">
+		<div class="typeCol" style="width:auto;">0.1</div>
+		<div class="valCol"style="margin-left:4em;">August 25, 2006 - Initial release.</div>
+	</div>
+</div>
+
+</div>
+
+</body>
+</html>

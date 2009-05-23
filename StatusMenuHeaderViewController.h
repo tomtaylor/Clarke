@@ -1,0 +1,17 @@
+#import <Cocoa/Cocoa.h>
+#import "FireEagleController.h"
+
+@interface StatusMenuHeaderViewController : NSViewController <FireEagleControllerDelegate> {
+  IBOutlet NSTextField *currentLocationLabel;
+  IBOutlet NSTextField *updatedAtLabel;
+  IBOutlet NSImageView *locationIcon;
+  IBOutlet NSProgressIndicator *locationSpinner;
+  
+  IBOutlet NSProgressIndicator *fireEagleSpinner;
+  IBOutlet NSImageView *fireEagleIcon;
+  IBOutlet NSTextField *fireEagleLabel;
+}
+
+- (void)viewWillAppear;
+
+@end

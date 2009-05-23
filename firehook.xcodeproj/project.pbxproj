@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E20C43CD0FC467710075CADF /* RHSystemIdleTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C43CC0FC467710075CADF /* RHSystemIdleTimer.m */; };
+		E20C43FF0FC469440075CADF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20C43FE0FC469440075CADF /* IOKit.framework */; };
+		E2235F800FAA4C1B002549BD /* FirehookApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2235F7F0FAA4C1B002549BD /* FirehookApplicationDelegate.m */; };
+		E24BD5800FB6C6920065CCD3 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24BD57F0FB6C6920065CCD3 /* Preferences.xib */; };
+		E24BD5860FB6C78C0065CCD3 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E24BD5850FB6C78C0065CCD3 /* Location.m */; };
+		E24BD7570FB6F29E0065CCD3 /* FireEagleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24BD7560FB6F29E0065CCD3 /* FireEagleController.m */; };
+		E24BD8720FB6FEF80065CCD3 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */; };
+		E24BD8860FB6FF130065CCD3 /* OAuthConsumer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */; };
+		E24BDBF80FB777080065CCD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24BDBF70FB777080065CCD3 /* Security.framework */; };
+		E24C5D090FC1EAED00BE3F84 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24C5D080FC1EAED00BE3F84 /* AboutView.xib */; };
+		E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */; };
+		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; };
+		E290C4020FA8F0CC0093018D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* LocationController.m */; };
+		E290C4310FA8F6050093018D /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C4300FA8F6050093018D /* Apple80211.framework */; };
+		E297BD7E0FBF17B500BE6AA9 /* fireeagle-phoenix.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */; };
+		E297BDB10FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E297BDB00FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m */; };
+		E297BDB80FBF1A4A00BE6AA9 /* AboutPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E297BDB70FBF1A4A00BE6AA9 /* AboutPreferencesViewController.m */; };
+		E297BDBA0FBF1E8F00BE6AA9 /* clarke-icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E297BDB90FBF1E8F00BE6AA9 /* clarke-icon.pdf */; };
+		E297BE3D0FBF28A700BE6AA9 /* status-bar-icon-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BE3C0FBF28A700BE6AA9 /* status-bar-icon-ok.png */; };
+		E297BE550FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BE540FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png */; };
+		E297BFA70FBF54F700BE6AA9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */; };
+		E297C0090FBF68F900BE6AA9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */; };
+		E297C09D0FBF73A200BE6AA9 /* map-logo-32px.png in Resources */ = {isa = PBXBuildFile; fileRef = E297C09C0FBF73A200BE6AA9 /* map-logo-32px.png */; };
+		E29A444E0FC6C6AB009CB8BB /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A444D0FC6C6AB009CB8BB /* NSDate+Helper.m */; };
+		E2B43F060FB382FB00CEE515 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B43F050FB382FB00CEE515 /* PreferencesWindowController.m */; };
+		E2C8E9A50FBCBE2000BF29A4 /* GeneralPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C8E9A40FBCBE2000BF29A4 /* GeneralPreferences.xib */; };
+		E2C8E9BF0FBCBF2300BF29A4 /* FireEaglePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C8E9BE0FBCBF2300BF29A4 /* FireEaglePreferences.xib */; };
+		E2D09B300FC0164F00F60A0D /* clarke-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2D09B2F0FC0164F00F60A0D /* clarke-icon.icns */; };
+		E2F2AFBC0FBB641C00210280 /* FireEaglePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2AFBB0FBB641C00210280 /* FireEaglePreferencesViewController.m */; };
+		E2F2AFC10FBB643400210280 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2AFC00FBB643400210280 /* GeneralPreferencesViewController.m */; };
+		E2F2AFC50FBB674F00210280 /* fe_logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F2AFC40FBB674F00210280 /* fe_logo_small.png */; };
+		E2F4540D0FBEBAC600E975B2 /* StatusMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F4540C0FBEBAC600E975B2 /* StatusMenu.xib */; };
+		E2F454130FBEBD2E00E975B2 /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F454110FBEBD2E00E975B2 /* map-pin.png */; };
+		E2F454140FBEBD2E00E975B2 /* map--exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = E2F454120FBEBD2E00E975B2 /* map--exclamation.png */; };
+		E2F4550E0FBECC7200E975B2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */; };
+		E2F457480FBED35E00E975B2 /* StatusMenuHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F457470FBED35E00E975B2 /* StatusMenuHeaderViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E24BD88A0FB6FF1A0065CCD3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E24BD8860FB6FF130065CCD3 /* OAuthConsumer.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E297BFC40FBF5C4A00BE6AA9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E297C0090FBF68F900BE6AA9 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* firehook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firehook_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Clarke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clarke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C43CB0FC467710075CADF /* RHSystemIdleTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSystemIdleTimer.h; sourceTree = "<group>"; };
+		E20C43CC0FC467710075CADF /* RHSystemIdleTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSystemIdleTimer.m; sourceTree = "<group>"; };
+		E20C43FE0FC469440075CADF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E2235F7E0FAA4C1B002549BD /* FirehookApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirehookApplicationDelegate.h; sourceTree = "<group>"; };
+		E2235F7F0FAA4C1B002549BD /* FirehookApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirehookApplicationDelegate.m; sourceTree = "<group>"; };
+		E24BD57F0FB6C6920065CCD3 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		E24BD5840FB6C78C0065CCD3 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		E24BD5850FB6C78C0065CCD3 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		E24BD7550FB6F29E0065CCD3 /* FireEagleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireEagleController.h; sourceTree = "<group>"; };
+		E24BD7560FB6F29E0065CCD3 /* FireEagleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireEagleController.m; sourceTree = "<group>"; };
+		E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
+		E24BDBF70FB777080065CCD3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E24C5D080FC1EAED00BE3F84 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		E24C5D0D0FC1EC8400BE3F84 /* DSClickableURLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSClickableURLTextField.h; sourceTree = "<group>"; };
+		E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSClickableURLTextField.m; sourceTree = "<group>"; };
+		E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwpsapi.dylib; sourceTree = "<group>"; };
+		E290C3F50FA8EE5D0093018D /* wpsapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wpsapi.h; sourceTree = "<group>"; };
+		E290C4000FA8F0CC0093018D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		E290C4010FA8F0CC0093018D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		E290C4300FA8F6050093018D /* Apple80211.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apple80211.framework; path = /System/Library/PrivateFrameworks/Apple80211.framework; sourceTree = "<absolute>"; };
+		E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireeagle-phoenix.png"; sourceTree = "<group>"; };
+		E297BDAF0FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
+		E297BDB00FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
+		E297BDB60FBF1A4A00BE6AA9 /* AboutPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPreferencesViewController.h; sourceTree = "<group>"; };
+		E297BDB70FBF1A4A00BE6AA9 /* AboutPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPreferencesViewController.m; sourceTree = "<group>"; };
+		E297BDB90FBF1E8F00BE6AA9 /* clarke-icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "clarke-icon.pdf"; sourceTree = "<group>"; };
+		E297BE3C0FBF28A700BE6AA9 /* status-bar-icon-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-ok.png"; sourceTree = "<group>"; };
+		E297BE540FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireeagle-phoenix-16px.png"; sourceTree = "<group>"; };
+		E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		E297C09C0FBF73A200BE6AA9 /* map-logo-32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-logo-32px.png"; sourceTree = "<group>"; };
+		E29A444C0FC6C6AB009CB8BB /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		E29A444D0FC6C6AB009CB8BB /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		E2B43F040FB382FB00CEE515 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		E2B43F050FB382FB00CEE515 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		E2C8E9A40FBCBE2000BF29A4 /* GeneralPreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferences.xib; sourceTree = "<group>"; };
+		E2C8E9BE0FBCBF2300BF29A4 /* FireEaglePreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FireEaglePreferences.xib; sourceTree = "<group>"; };
+		E2D09B2F0FC0164F00F60A0D /* clarke-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "clarke-icon.icns"; sourceTree = "<group>"; };
+		E2ED8A350FC84E3B00B984F3 /* SkyhookApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyhookApiKey.h; sourceTree = "<group>"; };
+		E2F2AFBA0FBB641C00210280 /* FireEaglePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireEaglePreferencesViewController.h; sourceTree = "<group>"; };
+		E2F2AFBB0FBB641C00210280 /* FireEaglePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireEaglePreferencesViewController.m; sourceTree = "<group>"; };
+		E2F2AFBF0FBB643400210280 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		E2F2AFC00FBB643400210280 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		E2F2AFC40FBB674F00210280 /* fe_logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fe_logo_small.png; sourceTree = "<group>"; };
+		E2F4540C0FBEBAC600E975B2 /* StatusMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusMenu.xib; sourceTree = "<group>"; };
+		E2F454110FBEBD2E00E975B2 /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
+		E2F454120FBEBD2E00E975B2 /* map--exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map--exclamation.png"; sourceTree = "<group>"; };
+		E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		E2F457460FBED35E00E975B2 /* StatusMenuHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMenuHeaderViewController.h; sourceTree = "<group>"; };
+		E2F457470FBED35E00E975B2 /* StatusMenuHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusMenuHeaderViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */,
+				E290C4310FA8F6050093018D /* Apple80211.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				E24BD8720FB6FEF80065CCD3 /* OAuthConsumer.framework in Frameworks */,
+				E24BDBF80FB777080065CCD3 /* Security.framework in Frameworks */,
+				E2F4550E0FBECC7200E975B2 /* CoreServices.framework in Frameworks */,
+				E297BFA70FBF54F700BE6AA9 /* Sparkle.framework in Frameworks */,
+				E20C43FF0FC469440075CADF /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E297BDB30FBF1A0000BE6AA9 /* Preferences */,
+				E290C4000FA8F0CC0093018D /* LocationController.h */,
+				E290C4010FA8F0CC0093018D /* LocationController.m */,
+				E2235F7E0FAA4C1B002549BD /* FirehookApplicationDelegate.h */,
+				E2235F7F0FAA4C1B002549BD /* FirehookApplicationDelegate.m */,
+				E24BD5840FB6C78C0065CCD3 /* Location.h */,
+				E24BD5850FB6C78C0065CCD3 /* Location.m */,
+				E24BD7550FB6F29E0065CCD3 /* FireEagleController.h */,
+				E24BD7560FB6F29E0065CCD3 /* FireEagleController.m */,
+				E2F457460FBED35E00E975B2 /* StatusMenuHeaderViewController.h */,
+				E2F457470FBED35E00E975B2 /* StatusMenuHeaderViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */,
+				E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */,
+				E290C4300FA8F6050093018D /* Apple80211.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Clarke.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* firehook */ = {
+			isa = PBXGroup;
+			children = (
+				E2D09BB10FC0A73400F60A0D /* Third Party */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				E20C43FE0FC469440075CADF /* IOKit.framework */,
+			);
+			name = firehook;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* firehook_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2AFC30FBB674700210280 /* Assets */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				E24BD57F0FB6C6920065CCD3 /* Preferences.xib */,
+				E2C8E9A40FBCBE2000BF29A4 /* GeneralPreferences.xib */,
+				E2C8E9BE0FBCBF2300BF29A4 /* FireEaglePreferences.xib */,
+				E2F4540C0FBEBAC600E975B2 /* StatusMenu.xib */,
+				E24C5D080FC1EAED00BE3F84 /* AboutView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
+				E24BDBF70FB777080065CCD3 /* Security.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E20C43CA0FC467710075CADF /* RHSystemIdleTimer */ = {
+			isa = PBXGroup;
+			children = (
+				E20C43CB0FC467710075CADF /* RHSystemIdleTimer.h */,
+				E20C43CC0FC467710075CADF /* RHSystemIdleTimer.m */,
+			);
+			path = RHSystemIdleTimer;
+			sourceTree = "<group>";
+		};
+		E24C5D0B0FC1EC8400BE3F84 /* DSClickableURLTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E24C5D0D0FC1EC8400BE3F84 /* DSClickableURLTextField.h */,
+				E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */,
+			);
+			path = DSClickableURLTextField;
+			sourceTree = "<group>";
+		};
+		E290C3F30FA8EE4D0093018D /* Skyhook */ = {
+			isa = PBXGroup;
+			children = (
+				E290C3F50FA8EE5D0093018D /* wpsapi.h */,
+				E2ED8A350FC84E3B00B984F3 /* SkyhookApiKey.h */,
+			);
+			name = Skyhook;
+			sourceTree = "<group>";
+		};
+		E297BDB30FBF1A0000BE6AA9 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E2B43F040FB382FB00CEE515 /* PreferencesWindowController.h */,
+				E2B43F050FB382FB00CEE515 /* PreferencesWindowController.m */,
+				E297BDAF0FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.h */,
+				E297BDB00FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m */,
+				E2F2AFBA0FBB641C00210280 /* FireEaglePreferencesViewController.h */,
+				E2F2AFBB0FBB641C00210280 /* FireEaglePreferencesViewController.m */,
+				E2F2AFBF0FBB643400210280 /* GeneralPreferencesViewController.h */,
+				E2F2AFC00FBB643400210280 /* GeneralPreferencesViewController.m */,
+				E297BDB60FBF1A4A00BE6AA9 /* AboutPreferencesViewController.h */,
+				E297BDB70FBF1A4A00BE6AA9 /* AboutPreferencesViewController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		E29A44500FC6C6AE009CB8BB /* NSDate Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E29A444C0FC6C6AB009CB8BB /* NSDate+Helper.h */,
+				E29A444D0FC6C6AB009CB8BB /* NSDate+Helper.m */,
+			);
+			name = "NSDate Helper";
+			sourceTree = "<group>";
+		};
+		E2D09BB10FC0A73400F60A0D /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				E29A44500FC6C6AE009CB8BB /* NSDate Helper */,
+				E20C43CA0FC467710075CADF /* RHSystemIdleTimer */,
+				E24C5D0B0FC1EC8400BE3F84 /* DSClickableURLTextField */,
+				E290C3F30FA8EE4D0093018D /* Skyhook */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		E2F2AFC30FBB674700210280 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E2D09B2F0FC0164F00F60A0D /* clarke-icon.icns */,
+				E297C09C0FBF73A200BE6AA9 /* map-logo-32px.png */,
+				E297BE540FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png */,
+				E297BE3C0FBF28A700BE6AA9 /* status-bar-icon-ok.png */,
+				E297BDB90FBF1E8F00BE6AA9 /* clarke-icon.pdf */,
+				E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */,
+				E2F454110FBEBD2E00E975B2 /* map-pin.png */,
+				E2F454120FBEBD2E00E975B2 /* map--exclamation.png */,
+				E2F2AFC40FBB674F00210280 /* fe_logo_small.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Clarke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Clarke" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				E290C46C0FA901D70093018D /* ShellScript */,
+				E24BD88A0FB6FF1A0065CCD3 /* CopyFiles */,
+				E297BFC40FBF5C4A00BE6AA9 /* CopyFiles */,
+				E27E65A60FC752DD0008BF6D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clarke;
+			productInstallPath = "$(HOME)/Applications";
+			productName = firehook;
+			productReference = 8D1107320486CEB800E47090 /* Clarke.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "firehook" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* firehook */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Clarke */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				E24BD5800FB6C6920065CCD3 /* Preferences.xib in Resources */,
+				E2F2AFC50FBB674F00210280 /* fe_logo_small.png in Resources */,
+				E2C8E9A50FBCBE2000BF29A4 /* GeneralPreferences.xib in Resources */,
+				E2C8E9BF0FBCBF2300BF29A4 /* FireEaglePreferences.xib in Resources */,
+				E2F4540D0FBEBAC600E975B2 /* StatusMenu.xib in Resources */,
+				E2F454130FBEBD2E00E975B2 /* map-pin.png in Resources */,
+				E2F454140FBEBD2E00E975B2 /* map--exclamation.png in Resources */,
+				E297BD7E0FBF17B500BE6AA9 /* fireeagle-phoenix.png in Resources */,
+				E297BDBA0FBF1E8F00BE6AA9 /* clarke-icon.pdf in Resources */,
+				E297BE3D0FBF28A700BE6AA9 /* status-bar-icon-ok.png in Resources */,
+				E297BE550FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png in Resources */,
+				E297C09D0FBF73A200BE6AA9 /* map-logo-32px.png in Resources */,
+				E2D09B300FC0164F00F60A0D /* clarke-icon.icns in Resources */,
+				E24C5D090FC1EAED00BE3F84 /* AboutView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E27E65A60FC752DD0008BF6D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "codesign -f -s 'Tom Taylor Code Signing Certificate' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
+		};
+		E290C46C0FA901D70093018D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\ncp -f libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libwpsapi.dylib\"\n\ninstall_name_tool -change libwpsapi.dylib @loader_path/../Frameworks/libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				E290C4020FA8F0CC0093018D /* LocationController.m in Sources */,
+				E2235F800FAA4C1B002549BD /* FirehookApplicationDelegate.m in Sources */,
+				E2B43F060FB382FB00CEE515 /* PreferencesWindowController.m in Sources */,
+				E24BD5860FB6C78C0065CCD3 /* Location.m in Sources */,
+				E24BD7570FB6F29E0065CCD3 /* FireEagleController.m in Sources */,
+				E2F2AFBC0FBB641C00210280 /* FireEaglePreferencesViewController.m in Sources */,
+				E2F2AFC10FBB643400210280 /* GeneralPreferencesViewController.m in Sources */,
+				E2F457480FBED35E00E975B2 /* StatusMenuHeaderViewController.m in Sources */,
+				E297BDB10FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m in Sources */,
+				E297BDB80FBF1A4A00BE6AA9 /* AboutPreferencesViewController.m in Sources */,
+				E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */,
+				E20C43CD0FC467710075CADF /* RHSystemIdleTimer.m in Sources */,
+				E29A444E0FC6C6AB009CB8BB /* NSDate+Helper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+					"\"$(SRCROOT)/../../src/OAuthConsumer/build/Debug\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = firehook_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = Clarke;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+					"\"$(SRCROOT)/../../src/OAuthConsumer/build/Debug\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = firehook_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = Clarke;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DDEBUG=1";
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Clarke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "firehook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
