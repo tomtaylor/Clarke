@@ -31,13 +31,13 @@
 		E297BDBA0FBF1E8F00BE6AA9 /* clarke-icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E297BDB90FBF1E8F00BE6AA9 /* clarke-icon.pdf */; };
 		E297BE3D0FBF28A700BE6AA9 /* status-bar-icon-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BE3C0FBF28A700BE6AA9 /* status-bar-icon-ok.png */; };
 		E297BE550FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BE540FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png */; };
-		E297BFA70FBF54F700BE6AA9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */; };
-		E297C0090FBF68F900BE6AA9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */; };
 		E297C09D0FBF73A200BE6AA9 /* map-logo-32px.png in Resources */ = {isa = PBXBuildFile; fileRef = E297C09C0FBF73A200BE6AA9 /* map-logo-32px.png */; };
 		E29A444E0FC6C6AB009CB8BB /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E29A444D0FC6C6AB009CB8BB /* NSDate+Helper.m */; };
 		E2B43F060FB382FB00CEE515 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B43F050FB382FB00CEE515 /* PreferencesWindowController.m */; };
 		E2C8E9A50FBCBE2000BF29A4 /* GeneralPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C8E9A40FBCBE2000BF29A4 /* GeneralPreferences.xib */; };
 		E2C8E9BF0FBCBF2300BF29A4 /* FireEaglePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C8E9BE0FBCBF2300BF29A4 /* FireEaglePreferences.xib */; };
+		E2CA09850FC9638D0001D1C5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CA09840FC9638D0001D1C5 /* Sparkle.framework */; };
+		E2CA098E0FC963930001D1C5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2CA09840FC9638D0001D1C5 /* Sparkle.framework */; };
 		E2D09B300FC0164F00F60A0D /* clarke-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2D09B2F0FC0164F00F60A0D /* clarke-icon.icns */; };
 		E2F2AFBC0FBB641C00210280 /* FireEaglePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2AFBB0FBB641C00210280 /* FireEaglePreferencesViewController.m */; };
 		E2F2AFC10FBB643400210280 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2AFC00FBB643400210280 /* GeneralPreferencesViewController.m */; };
@@ -56,17 +56,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E2CA098E0FC963930001D1C5 /* Sparkle.framework in CopyFiles */,
 				E24BD8860FB6FF130065CCD3 /* OAuthConsumer.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E297BFC40FBF5C4A00BE6AA9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E297C0090FBF68F900BE6AA9 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +102,6 @@
 		E297BDB90FBF1E8F00BE6AA9 /* clarke-icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "clarke-icon.pdf"; sourceTree = "<group>"; };
 		E297BE3C0FBF28A700BE6AA9 /* status-bar-icon-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-ok.png"; sourceTree = "<group>"; };
 		E297BE540FBF2B2000BE6AA9 /* fireeagle-phoenix-16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireeagle-phoenix-16px.png"; sourceTree = "<group>"; };
-		E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E297C09C0FBF73A200BE6AA9 /* map-logo-32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-logo-32px.png"; sourceTree = "<group>"; };
 		E29A444C0FC6C6AB009CB8BB /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		E29A444D0FC6C6AB009CB8BB /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
@@ -119,6 +109,7 @@
 		E2B43F050FB382FB00CEE515 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		E2C8E9A40FBCBE2000BF29A4 /* GeneralPreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferences.xib; sourceTree = "<group>"; };
 		E2C8E9BE0FBCBF2300BF29A4 /* FireEaglePreferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FireEaglePreferences.xib; sourceTree = "<group>"; };
+		E2CA09840FC9638D0001D1C5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E2D09B2F0FC0164F00F60A0D /* clarke-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "clarke-icon.icns"; sourceTree = "<group>"; };
 		E2ED8A350FC84E3B00B984F3 /* SkyhookApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyhookApiKey.h; sourceTree = "<group>"; };
 		E2F2AFBA0FBB641C00210280 /* FireEaglePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireEaglePreferencesViewController.h; sourceTree = "<group>"; };
@@ -145,8 +136,8 @@
 				E24BD8720FB6FEF80065CCD3 /* OAuthConsumer.framework in Frameworks */,
 				E24BDBF80FB777080065CCD3 /* Security.framework in Frameworks */,
 				E2F4550E0FBECC7200E975B2 /* CoreServices.framework in Frameworks */,
-				E297BFA70FBF54F700BE6AA9 /* Sparkle.framework in Frameworks */,
 				E20C43FF0FC469440075CADF /* IOKit.framework in Frameworks */,
+				E2CA09850FC9638D0001D1C5 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +165,9 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2CA09840FC9638D0001D1C5 /* Sparkle.framework */,
 				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
 				E24BDBF70FB777080065CCD3 /* Security.framework */,
-				E297BFA60FBF54F700BE6AA9 /* Sparkle.framework */,
 				E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */,
 				E290C4300FA8F6050093018D /* Apple80211.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -343,7 +334,6 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				E290C46C0FA901D70093018D /* ShellScript */,
 				E24BD88A0FB6FF1A0065CCD3 /* CopyFiles */,
-				E297BFC40FBF5C4A00BE6AA9 /* CopyFiles */,
 				E27E65A60FC752DD0008BF6D /* ShellScript */,
 			);
 			buildRules = (
@@ -528,6 +518,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -543,6 +534,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
