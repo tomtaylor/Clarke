@@ -41,6 +41,7 @@
 }
 
 - (void)dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
   locationController.delegate = nil;
   [thePreferencesWindowController release];
   [theStatusHeaderViewController release];
@@ -134,6 +135,7 @@
   NSMenuItem *statusMenuHeaderItem = [[NSMenuItem alloc] init];
   [statusMenuHeaderItem setView:theStatusHeaderViewController.view];
   [theMenu addItem:statusMenuHeaderItem];
+  [statusMenuHeaderItem release];
   
   [theMenu addItem:[NSMenuItem separatorItem]];
   

@@ -61,9 +61,9 @@
     //create a new UUID
     CFUUIDRef uuidObj = CFUUIDCreate(nil); 
     NSString *uuidString = (NSString*)CFUUIDCreateString(nil, uuidObj);
+    [uuidString autorelease];
     CFRelease(uuidObj);
     NSLog(@"Generated username for Skyhook: %@", uuidString);
-    
     newAuthentication.username = [uuidString UTF8String]; // convert to c string
     
     WPS_ReturnCode authRc;
@@ -72,6 +72,7 @@
       NSLog(@"Registration with Skyhook failed.");
       NSError *error = [NSError errorWithDomain:@"locationController (authentication)" code:authRc userInfo:nil];
       [self performSelectorOnMainThread:@selector(locationUpdateFailedWithError:) withObject:error waitUntilDone:YES];
+      [pool release];
       return;
     } else {
       NSLog(@"Registration with Skyhook succeeded, storing username");
@@ -163,7 +164,7 @@ static LocationController *sharedLocationController = nil;
 + (LocationController *)sharedInstance {
   @synchronized(self) {
     if (sharedLocationController == nil) {
-      sharedLocationController = [[self alloc] init]; // assignment not done here
+      sharedLocationController = [[self alloc] init];
     }
   }
   return sharedLocationController;

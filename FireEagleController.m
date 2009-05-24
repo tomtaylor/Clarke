@@ -52,6 +52,8 @@
                                                                                         delegate:self
                                                                                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
                                                                                  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
+  
+  [request release];
   [fetcher start];
 }
 
@@ -61,6 +63,7 @@
     NSString *responseBody = [[NSString alloc] initWithData:data
                                                    encoding:NSUTF8StringEncoding];
     requestToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+    [responseBody release];
     
     for (id delegate in delegates) {
       if ([delegate respondsToSelector:@selector(requestTokenDidFinish)]) {
@@ -109,6 +112,7 @@
                         didFinishSelector:@selector(accessTokenTicket:didFinishWithData:)
                           didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
   
+  [request release];
   [fetcher start];
 }
 
@@ -118,6 +122,8 @@
     NSString *responseBody = [[NSString alloc] initWithData:data
                                                    encoding:NSUTF8StringEncoding];
     accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+    [responseBody release];
+    
     [accessToken storeInDefaultKeychainWithAppName:FIRE_EAGLE_KEYCHAIN_APP_NAME
                                serviceProviderName:FIRE_EAGLE_KEYCHAIN_SERVICE_PROVIDER];
     
@@ -179,6 +185,8 @@
   
   [request setHTTPMethod:@"POST"]; // always change HTTP method before setting params
   [request setParameters:[NSArray arrayWithObjects:latitudeParam, longitudeParam, nil]];
+  [latitudeParam release];
+  [longitudeParam release];
   
   OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
   [fetcher fetchDataWithRequest:request                 
@@ -186,6 +194,7 @@
               didFinishSelector:@selector(serviceTicket:didUpdateLocationWithData:) 
                 didFailSelector:@selector(serviceTicket:didFailToUpdateLocationWithError:)];
 
+  [request release];
   [pool release];
 }
 

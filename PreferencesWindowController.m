@@ -78,7 +78,6 @@ static NSString *AboutToolbarItemIdentifier = @"About Toolbar Item";
   [toolbarItem setTarget:self];
   
   if ([itemIdentifier isEqualTo:GeneralToolbarItemIdentifier]) {
-    toolbarItem = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
     [toolbarItem setLabel:@"General"];
     [toolbarItem setPaletteLabel:[toolbarItem label]];
     [toolbarItem setToolTip:@"General Preferences"];
