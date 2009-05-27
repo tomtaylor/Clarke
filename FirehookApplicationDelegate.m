@@ -204,7 +204,7 @@
 
 - (void)openFlickr {
   Location *location = [[LocationController sharedInstance] lastKnownLocation];
-  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.flickr.com/map?fLat=%f&fLon=%f", location.coordinate.latitude, location.coordinate.longitude]];
+  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.flickr.com/nearby/%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
   [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
