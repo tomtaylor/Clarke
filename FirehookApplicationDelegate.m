@@ -6,7 +6,11 @@
   #define LOCATION_INTERVAL 300
 #endif
 
-#define IDLE_TIMEOUT 300
+#ifdef DEBUG
+  #define IDLE_TIMEOUT 5
+#else
+  #define IDLE_TIMEOUT 300
+#endif
 
 @interface FirehookApplicationDelegate(Private)
 
@@ -186,8 +190,17 @@
   [self rescheduleLocationRefreshTimer];
 }
 
+- (void)killLocationRefreshTimer {
+  [locationUpdateTimer invalidate];
+  [locationUpdateTimer release];
+  locationUpdateTimer = nil;
+}
+
 - (void)rescheduleLocationRefreshTimer {
   NSInteger updateInterval = LOCATION_INTERVAL;
+  
+  [self killLocationRefreshTimer];
+  
   locationUpdateTimer = [NSTimer timerWithTimeInterval:updateInterval target:locationController selector:@selector(refreshLocation) userInfo:nil repeats:NO];
   [[NSRunLoop currentRunLoop] addTimer:locationUpdateTimer forMode:NSRunLoopCommonModes];
 }
@@ -233,6 +246,7 @@
 - (void)timerBeginsIdling:(id)sender {
   NSLog(@"Clarke began idling");
   isIdle = YES;
+  [self killLocationRefreshTimer];
 }
 
 - (void)timerFinishedIdling:(id)sender {
