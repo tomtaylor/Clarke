@@ -11,7 +11,7 @@
 
 @implementation FireEaglePreferencesViewController
 
-@synthesize loggedOutView, loggedInView;
+@synthesize loggedOutView, loggedInView, waitingForAuthorizationView, oauthVerifier;
 
 - (id) init {
   self = [super init];
@@ -41,7 +41,8 @@
 - (IBAction)signIn:(id)sender {
   if ([theFireEagleController hasRequestToken]) {
     NSLog(@"Requesting access token");
-    [theFireEagleController getAccessToken];
+    [theFireEagleController getAccessTokenWithVerifier:[self.oauthVerifier stringValue]];
+    [self.oauthVerifier setStringValue:@""];
   } else {
     NSLog(@"Requesting request token");
     [theFireEagleController getRequestToken]; 
@@ -59,21 +60,22 @@
 - (void)requestTokenDidFinish {
   [progressIndicator stopAnimation:self];
   [[NSWorkspace sharedWorkspace] openURL:[theFireEagleController getAuthorizeURL]];
-  [loggedOutLabel setStringValue:@"When you have given Clarke permission, click Continue."];
-  [loggedOutSubtitle setHidden:YES];
-  [loggedOutButton setTitle:@"Continue"];
-}
   
+  [self.view replaceSubview:loggedOutView with:waitingForAuthorizationView];
+  // this replicates the text in the NIB (which is overridden on failure, so it needs to be reset)
+  [loggedOutLabel setStringValue:@"When you have given Clarke permission, enter the verification code and click Continue."];
+}
+
 - (void)requestTokenDidFailWithError:(NSError *)error {
   [progressIndicator stopAnimation:self];
-  [loggedOutLabel setStringValue:@"There was a problem signing you into Fire Eagle."];
+  [loggedOutLabel setStringValue:@"There was a problem signing you into Fire Eagle. Please try authorizing again."];
   [loggedOutSubtitle setHidden:YES];
   [loggedOutButton setTitle:@"Try again"];
 }
 
 - (void)accessTokenDidFinish {
   [progressIndicator stopAnimation:self];
-  [self.view replaceSubview:loggedOutView with:loggedInView];
+  [self.view replaceSubview:waitingForAuthorizationView with:loggedInView];
   
   
   Location *lastKnownLocation = [[LocationController sharedInstance] lastKnownLocation];

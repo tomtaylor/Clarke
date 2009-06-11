@@ -45,9 +45,12 @@
                                                                     token:nil   // we don't have a Token yet
                                                                     realm:nil   // our service provider doesn't specify a realm
                                                         signatureProvider:nil]; // use the default method, HMAC-SHA1
-  
+
   [request setHTTPMethod:@"POST"];
   
+  OARequestParameter *oauthCallback = [[OARequestParameter alloc] initWithName:@"oauth_callback" value:@"oob"];
+  [request setParameters:[NSArray arrayWithObjects:oauthCallback, nil]];
+
   OAAsynchronousDataFetcher *fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:request
                                                                                         delegate:self
                                                                                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
@@ -96,9 +99,9 @@
   return accessToken != nil;
 }
 
-- (void)getAccessToken {
+- (void)getAccessTokenWithVerifier:(NSString *)oauthVerifier {
   NSURL *url = [NSURL URLWithString:@"https://fireeagle.yahooapis.com/oauth/access_token"];
-  
+
   OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL:url
                                                                  consumer:self.consumer
                                                                     token:requestToken
@@ -107,6 +110,9 @@
   
   [request setHTTPMethod:@"POST"];
   
+  OARequestParameter *oauthVerifierParam = [[OARequestParameter alloc] initWithName:@"oauth_verifier" value:oauthVerifier];
+  [request setParameters:[NSArray arrayWithObjects:oauthVerifierParam, nil]];
+
   OAAsynchronousDataFetcher *fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:request
                                  delegate:self
                         didFinishSelector:@selector(accessTokenTicket:didFinishWithData:)

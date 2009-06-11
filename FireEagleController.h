@@ -23,7 +23,7 @@
 
 - (void)getRequestToken;
 - (NSURL *)getAuthorizeURL;
-- (void)getAccessToken;
+- (void)getAccessTokenWithVerifier:(NSString *)oauthVerifier;
 - (void)updateLocation:(Location *)location;
 
 - (BOOL)hasRequestToken;
