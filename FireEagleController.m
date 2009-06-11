@@ -56,6 +56,7 @@
                                                                                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
                                                                                  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
   
+  [oauthCallback release];
   [request release];
   [fetcher start];
 }
@@ -118,6 +119,7 @@
                         didFinishSelector:@selector(accessTokenTicket:didFinishWithData:)
                           didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
   
+  [oauthVerifierParam release];
   [request release];
   [fetcher start];
 }
