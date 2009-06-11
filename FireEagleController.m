@@ -146,8 +146,8 @@
   requestToken = nil;
   
   for (id delegate in delegates) {
-    if ([delegate respondsToSelector:@selector(accessTokenDidFailWithError)]) {
-      [delegate performSelectorOnMainThread:@selector(accessTokenDidFailWithError) withObject:error waitUntilDone:YES];
+    if ([delegate respondsToSelector:@selector(accessTokenDidFailWithError:)]) {
+      [delegate performSelectorOnMainThread:@selector(accessTokenDidFailWithError:) withObject:error waitUntilDone:YES];
     }
   }
       
