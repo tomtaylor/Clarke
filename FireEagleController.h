@@ -28,6 +28,7 @@
 
 - (BOOL)hasRequestToken;
 - (BOOL)hasAccessToken;
+- (void)clearTokens;
 - (void)logout;
 
 @end
@@ -38,6 +39,7 @@
 
 - (void)accessTokenDidFinish;
 - (void)accessTokenDidFailWithError:(NSError *)error;
+
 - (void)requestTokenDidFinish;
 - (void)requestTokenDidFailWithError:(NSError *)error;
 

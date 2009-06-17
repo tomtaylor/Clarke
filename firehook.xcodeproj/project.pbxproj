@@ -22,6 +22,7 @@
 		E24BDBF80FB777080065CCD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24BDBF70FB777080065CCD3 /* Security.framework */; };
 		E24C5D090FC1EAED00BE3F84 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24C5D080FC1EAED00BE3F84 /* AboutView.xib */; };
 		E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */; };
+		E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E282FD060FE847E6008F1132 /* AXCVHandler.m */; };
 		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; };
 		E290C4020FA8F0CC0093018D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* LocationController.m */; };
 		E290C4310FA8F6050093018D /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C4300FA8F6050093018D /* Apple80211.framework */; };
@@ -89,6 +90,8 @@
 		E24C5D080FC1EAED00BE3F84 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		E24C5D0D0FC1EC8400BE3F84 /* DSClickableURLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSClickableURLTextField.h; sourceTree = "<group>"; };
 		E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSClickableURLTextField.m; sourceTree = "<group>"; };
+		E282FD050FE847E6008F1132 /* AXCVHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCVHandler.h; sourceTree = "<group>"; };
+		E282FD060FE847E6008F1132 /* AXCVHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCVHandler.m; sourceTree = "<group>"; };
 		E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwpsapi.dylib; sourceTree = "<group>"; };
 		E290C3F50FA8EE5D0093018D /* wpsapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wpsapi.h; sourceTree = "<group>"; };
 		E290C4000FA8F0CC0093018D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
@@ -260,6 +263,15 @@
 			path = DSClickableURLTextField;
 			sourceTree = "<group>";
 		};
+		E282FCBA0FE84581008F1132 /* AXCVHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E282FD050FE847E6008F1132 /* AXCVHandler.h */,
+				E282FD060FE847E6008F1132 /* AXCVHandler.m */,
+			);
+			name = AXCVHandler;
+			sourceTree = "<group>";
+		};
 		E290C3F30FA8EE4D0093018D /* Skyhook */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +310,7 @@
 		E2D09BB10FC0A73400F60A0D /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				E282FCBA0FE84581008F1132 /* AXCVHandler */,
 				E29A44500FC6C6AE009CB8BB /* NSDate Helper */,
 				E20C43CA0FC467710075CADF /* RHSystemIdleTimer */,
 				E24C5D0B0FC1EC8400BE3F84 /* DSClickableURLTextField */,
@@ -437,6 +450,7 @@
 				E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */,
 				E20C43CD0FC467710075CADF /* RHSystemIdleTimer.m in Sources */,
 				E29A444E0FC6C6AB009CB8BB /* NSDate+Helper.m in Sources */,
+				E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

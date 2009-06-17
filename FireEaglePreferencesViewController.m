@@ -35,14 +35,14 @@
     [self.view addSubview:self.loggedInView];
   } else {
     [self.view addSubview:self.loggedOutView];
+    [theFireEagleController clearTokens];
   }
 }
 
 - (IBAction)signIn:(id)sender {
   if ([theFireEagleController hasRequestToken]) {
-    NSLog(@"Requesting access token");
+    NSLog(@"Requesting access token with verifier: %@", [self.oauthVerifier stringValue]);
     [theFireEagleController getAccessTokenWithVerifier:[self.oauthVerifier stringValue]];
-    [self.oauthVerifier setStringValue:@""];
   } else {
     NSLog(@"Requesting request token");
     [theFireEagleController getRequestToken]; 
@@ -52,6 +52,8 @@
 
 - (IBAction)signOut:(id)sender {
   [theFireEagleController logout];
+  [theFireEagleController clearTokens];
+  [oauthVerifier setStringValue:@""];
   [self.view replaceSubview:loggedInView with:loggedOutView];
 }
 
@@ -74,9 +76,9 @@
 }
 
 - (void)accessTokenDidFinish {
+  NSLog(@"Access token did finish in Fire Eagle Preferences view.");
   [progressIndicator stopAnimation:self];
   [self.view replaceSubview:waitingForAuthorizationView with:loggedInView];
-  
   
   Location *lastKnownLocation = [[LocationController sharedInstance] lastKnownLocation];
   if (lastKnownLocation) {
@@ -85,9 +87,22 @@
 }
 
 - (void)accessTokenDidFailWithError:(NSError *)error {
+  NSLog(@"Access token did fail in Fire Eagle Preferences view.");
   [progressIndicator stopAnimation:self];
-  [loggedOutLabel setStringValue:@"There was a problem signing you into Fire Eagle."];
-  [loggedOutButton setTitle:@"Try again"];  
+  
+  NSAlert *alert = [[NSAlert alloc] init];
+  [alert addButtonWithTitle:@"Try again"];
+  [alert setMessageText:@"That verification code didn't seem to be correct"];
+  [alert setInformativeText:@"Please try again, making sure you type the verification code correctly."];
+  [alert setAlertStyle:NSWarningAlertStyle];
+  
+  // TODO: allow retry of badly typed verification code
+  if ([alert runModal] == NSAlertFirstButtonReturn) { // try again
+    [theFireEagleController clearTokens];
+    [self.view replaceSubview:waitingForAuthorizationView with:loggedOutView];
+  }
+  
+  [alert release];
 }
 
 @end

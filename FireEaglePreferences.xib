@@ -9,8 +9,8 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="22"/>
+			<integer value="2"/>
 			<integer value="33"/>
-			<integer value="31"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -249,13 +249,13 @@ byBzaWduIGluLiBXaGVuIHlvdSd2ZSBkb25lIHRoYXQsIHJldHVybiBoZXJlLg</string>
 					<object class="NSTextField" id="912489532">
 						<reference key="NSNextResponder" ref="654806078"/>
 						<int key="NSvFlags">270</int>
-						<string key="NSFrame">{{37, 156}, {446, 34}}</string>
+						<string key="NSFrame">{{17, 192}, {446, 34}}</string>
 						<reference key="NSSuperview" ref="654806078"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="557382869">
 							<int key="NSCellFlags">67239424</int>
 							<int key="NSCellFlags2">4194304</int>
-							<string key="NSContents">When you have given Clarke permission, enter the verification code and click Continue.</string>
+							<string key="NSContents">When you have given Clarke permission, enter the verification code from the Fire Eagle site into the box below, and click Continue.</string>
 							<reference key="NSSupport" ref="473202099"/>
 							<reference key="NSControlView" ref="912489532"/>
 							<bool key="NSDrawsBackground">YES</bool>
@@ -266,7 +266,7 @@ byBzaWduIGluLiBXaGVuIHlvdSd2ZSBkb25lIHRoYXQsIHJldHVybiBoZXJlLg</string>
 					<object class="NSTextField" id="368930124">
 						<reference key="NSNextResponder" ref="654806078"/>
 						<int key="NSvFlags">270</int>
-						<string key="NSFrame">{{107, 201}, {120, 18}}</string>
+						<string key="NSFrame">{{17, 155}, {120, 18}}</string>
 						<reference key="NSSuperview" ref="654806078"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="845244747">
@@ -283,7 +283,7 @@ byBzaWduIGluLiBXaGVuIHlvdSd2ZSBkb25lIHRoYXQsIHJldHVybiBoZXJlLg</string>
 					<object class="NSButton" id="838657421">
 						<reference key="NSNextResponder" ref="654806078"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{330, 192}, {97, 32}}</string>
+						<string key="NSFrame">{{240, 146}, {97, 32}}</string>
 						<reference key="NSSuperview" ref="654806078"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="554651770">
@@ -322,12 +322,12 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<object class="NSTextField" id="397232025">
 						<reference key="NSNextResponder" ref="654806078"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{232, 198}, {96, 22}}</string>
+						<string key="NSFrame">{{142, 152}, {96, 22}}</string>
 						<reference key="NSSuperview" ref="654806078"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="887926557">
 							<int key="NSCellFlags">-1804468671</int>
-							<int key="NSCellFlags2">272630784</int>
+							<int key="NSCellFlags2">268436480</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="473202099"/>
 							<reference key="NSControlView" ref="397232025"/>
@@ -353,7 +353,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="NSNextResponder" ref="654806078"/>
 						<int key="NSvFlags">1292</int>
 						<object class="NSPSMatrix" key="NSDrawMatrix"/>
-						<string key="NSFrame">{{429, 201}, {16, 16}}</string>
+						<string key="NSFrame">{{339, 155}, {16, 16}}</string>
 						<reference key="NSSuperview" ref="654806078"/>
 						<int key="NSpiFlags">28938</int>
 						<double key="NSMinValue">1.600000e+01</double>
@@ -441,14 +441,6 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<int key="connectionID">52</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">signIn:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="397232025"/>
-					</object>
-					<int key="connectionID">53</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">progressIndicator</string>
 						<reference key="source" ref="1001"/>
@@ -471,6 +463,14 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="destination" ref="912489532"/>
 					</object>
 					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">signIn:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="397232025"/>
+					</object>
+					<int key="connectionID">152</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -645,10 +645,10 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<reference key="object" ref="654806078"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="912489532"/>
 							<reference ref="368930124"/>
 							<reference ref="838657421"/>
 							<reference ref="397232025"/>
-							<reference ref="912489532"/>
 							<reference ref="214636683"/>
 						</object>
 						<reference key="parent" ref="1002"/>
@@ -770,6 +770,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string>37.IBPluginDependency</string>
 					<string>38.IBPluginDependency</string>
 					<string>40.IBPluginDependency</string>
+					<string>42.CustomClassName</string>
 					<string>42.IBPluginDependency</string>
 					<string>43.IBPluginDependency</string>
 					<string>49.IBPluginDependency</string>
@@ -820,7 +821,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{518, 236}, {480, 240}}</string>
+					<string>{{232, 232}, {480, 240}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<real value="0.000000e+00" id="67561792"/>
 					<reference ref="453161039"/>
@@ -836,6 +837,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>AXCVHandler</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -872,11 +874,19 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">151</int>
+			<int key="maxID">152</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">AXCVHandler</string>
+					<string key="superclassName">NSTextField</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">AXCVHandler.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">FireEaglePreferencesViewController</string>
 					<string key="superclassName">NSViewController</string>
@@ -915,7 +925,7 @@ ARcABAAAAAEAAAACARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<string>NSTextField</string>
 							<string>NSView</string>
 							<string>NSMenu</string>
-							<string>NSTextField</string>
+							<string>AXCVHandler</string>
 							<string>NSProgressIndicator</string>
 							<string>NSView</string>
 						</object>

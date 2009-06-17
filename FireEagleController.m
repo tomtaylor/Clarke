@@ -8,6 +8,7 @@
 @interface FireEagleController(Private)
 
 - (void)accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)error;
+- (void)clearTokens;
 
 @end
 
@@ -46,7 +47,7 @@
                                                                     realm:nil   // our service provider doesn't specify a realm
                                                         signatureProvider:nil]; // use the default method, HMAC-SHA1
 
-  [request setHTTPMethod:@"POST"];
+  [request setHTTPMethod:@"GET"];
   
   OARequestParameter *oauthCallback = [[OARequestParameter alloc] initWithName:@"oauth_callback" value:@"oob"];
   [request setParameters:[NSArray arrayWithObjects:oauthCallback, nil]];
@@ -109,17 +110,17 @@
                                                                     realm:nil   // our service provider doesn't specify a realm
                                                         signatureProvider:nil]; // use the default method, HMAC-SHA1
   
-  [request setHTTPMethod:@"POST"];
+  [request setHTTPMethod:@"GET"];
   
   OARequestParameter *oauthVerifierParam = [[OARequestParameter alloc] initWithName:@"oauth_verifier" value:oauthVerifier];
   [request setParameters:[NSArray arrayWithObjects:oauthVerifierParam, nil]];
+  [oauthVerifierParam release];
 
   OAAsynchronousDataFetcher *fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:request
                                  delegate:self
                         didFinishSelector:@selector(accessTokenTicket:didFinishWithData:)
                           didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
   
-  [oauthVerifierParam release];
   [request release];
   [fetcher start];
 }
@@ -280,6 +281,14 @@ static FireEagleController *sharedFireEagleController = nil;
     }
   }
   return sharedFireEagleController;
+}
+
+- (void)clearTokens {
+  [requestToken release];
+  requestToken = nil;
+  
+  [accessToken release];
+  accessToken = nil;
 }
 
 

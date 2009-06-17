@@ -57,6 +57,7 @@
   [systemIdleTimer setDelegate:self];
   isIdle = NO;
   
+  //[self registerURLHandler];
   [self configureDefaultSettings];
   [self activateStatusMenu];
   
@@ -73,6 +74,11 @@
                                                              name: NSWorkspaceDidWakeNotification 
                                                            object: nil];
 }
+
+//- (void)registerURLHandler {
+//  NSAppleEventManager *appleEventManager = [NSAppleEventManager sharedAppleEventManager];
+//  [appleEventManager setEventHandler:self andSelector:@selector(handleGetURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
+//}
 
 - (void)configureDefaultSettings {
   [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:@"YES", @"pauseUpdatesWhenIdle", nil]];
@@ -261,5 +267,11 @@
 - (BOOL)shouldPauseUpdatesWhenIdle {
   return [[NSUserDefaults standardUserDefaults] boolForKey:@"pauseUpdatesWhenIdle"];
 }
+
+//- (void)handleGetURLEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+//{
+//  NSString *url = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
+//  NSLog(url);
+//}
 
 @end
