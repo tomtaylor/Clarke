@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.2.3</string>
+	<string>0.3.1</string>
 	<key>SUFeedURL</key>
 	<string>https://clarkeapp.s3.amazonaws.com/appcast.xml</string>
 	<key>SUEnableAutomaticChecks</key>
@@ -31,7 +31,7 @@
 	<key>SUScheduledCheckInterval</key>
 	<integer>86400</integer>
 	<key>CFBundleDisplayName</key>
-	<string></string>
+	<string>${PRODUCT_NAME}</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
