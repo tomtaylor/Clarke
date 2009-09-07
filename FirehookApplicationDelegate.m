@@ -29,7 +29,7 @@
 - (id) init {
 	self = [super init];
 	if (self != nil) {
-		locationController = [LocationController sharedInstance];
+		locationController = [SkyhookLocationController sharedInstance];
 		locationController.delegate = self;
 		thePreferencesWindowController = [[PreferencesWindowController alloc] init];
 		theStatusHeaderViewController = [[StatusMenuHeaderViewController alloc] init];
@@ -154,7 +154,7 @@
 	[nearbyMenu release];
 	[nearbyItem release];
 	
-	if ([[LocationController sharedInstance] lastKnownLocation] == nil) {
+	if ([[SkyhookLocationController sharedInstance] lastKnownLocation] == nil) {
 		[nearbyItem setEnabled:NO];
 	}
 	
@@ -199,25 +199,25 @@
 }
 
 - (void)openFlickr {
-	Location *location = [[LocationController sharedInstance] lastKnownLocation];
+	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.flickr.com/nearby/%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openGoogleMaps {
-	Location *location = [[LocationController sharedInstance] lastKnownLocation];
+	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.google.com/?q=%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openOpenStreetMap {
-	Location *location = [[LocationController sharedInstance] lastKnownLocation];
+	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=15&layers=B000FTF", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openYahoo {
-	Location *location = [[LocationController sharedInstance] lastKnownLocation];
+	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.yahoo.com/?lat=%f&lon=%f&zoom=16", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }

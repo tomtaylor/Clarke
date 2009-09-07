@@ -24,7 +24,7 @@
 		E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */; };
 		E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E282FD060FE847E6008F1132 /* AXCVHandler.m */; };
 		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; };
-		E290C4020FA8F0CC0093018D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* LocationController.m */; };
+		E290C4020FA8F0CC0093018D /* SkyhookLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */; };
 		E290C4310FA8F6050093018D /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C4300FA8F6050093018D /* Apple80211.framework */; };
 		E297BD7E0FBF17B500BE6AA9 /* fireeagle-phoenix.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */; };
 		E297BDB10FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E297BDB00FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.m */; };
@@ -94,8 +94,8 @@
 		E282FD060FE847E6008F1132 /* AXCVHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCVHandler.m; sourceTree = "<group>"; };
 		E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwpsapi.dylib; sourceTree = "<group>"; };
 		E290C3F50FA8EE5D0093018D /* wpsapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wpsapi.h; sourceTree = "<group>"; };
-		E290C4000FA8F0CC0093018D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
-		E290C4010FA8F0CC0093018D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		E290C4000FA8F0CC0093018D /* SkyhookLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyhookLocationController.h; sourceTree = "<group>"; };
+		E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyhookLocationController.m; sourceTree = "<group>"; };
 		E290C4300FA8F6050093018D /* Apple80211.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apple80211.framework; path = /System/Library/PrivateFrameworks/Apple80211.framework; sourceTree = "<absolute>"; };
 		E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireeagle-phoenix.png"; sourceTree = "<group>"; };
 		E297BDAF0FBF19FB00BE6AA9 /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				E297BDB30FBF1A0000BE6AA9 /* Preferences */,
-				E290C4000FA8F0CC0093018D /* LocationController.h */,
-				E290C4010FA8F0CC0093018D /* LocationController.m */,
+				E290C4000FA8F0CC0093018D /* SkyhookLocationController.h */,
+				E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */,
 				E2235F7E0FAA4C1B002549BD /* FirehookApplicationDelegate.h */,
 				E2235F7F0FAA4C1B002549BD /* FirehookApplicationDelegate.m */,
 				E24BD5840FB6C78C0065CCD3 /* Location.h */,
@@ -437,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				E290C4020FA8F0CC0093018D /* LocationController.m in Sources */,
+				E290C4020FA8F0CC0093018D /* SkyhookLocationController.m in Sources */,
 				E2235F800FAA4C1B002549BD /* FirehookApplicationDelegate.m in Sources */,
 				E2B43F060FB382FB00CEE515 /* PreferencesWindowController.m in Sources */,
 				E24BD5860FB6C78C0065CCD3 /* Location.m in Sources */,

@@ -1,6 +1,6 @@
 #import "FireEaglePreferencesViewController.h"
 #import "FireEagleController.h"
-#import "LocationController.h"
+#import "SkyhookLocationController.h"
 
 @interface FireEaglePreferencesViewController(Private)
 
@@ -80,7 +80,7 @@
   [progressIndicator stopAnimation:self];
   [self.view replaceSubview:waitingForAuthorizationView with:loggedInView];
   
-  Location *lastKnownLocation = [[LocationController sharedInstance] lastKnownLocation];
+  Location *lastKnownLocation = [[SkyhookLocationController sharedInstance] lastKnownLocation];
   if (lastKnownLocation) {
     [theFireEagleController updateLocation:lastKnownLocation];
   }

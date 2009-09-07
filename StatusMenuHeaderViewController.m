@@ -1,6 +1,6 @@
 #import "StatusMenuHeaderViewController.h"
 #import "Location.h"
-#import "LocationController.h"
+#import "SkyhookLocationController.h"
 #import "FireEagleController.h"
 #import "wpsapi.h"
 
@@ -24,7 +24,7 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationDidChange:) name:UpdatedLocationNotification object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationUpdateDidFail:) name:FailedLocationUpdateNotification object:nil];
 		
-		[[LocationController sharedInstance] addObserver:self forKeyPath:@"updateInProgress" options:NSKeyValueObservingOptionNew context:NULL];
+		[[SkyhookLocationController sharedInstance] addObserver:self forKeyPath:@"updateInProgress" options:NSKeyValueObservingOptionNew context:NULL];
 		[[FireEagleController sharedInstance] addDelegate:self];
 	}
 	return self;
@@ -44,10 +44,10 @@
 	[updatedAtLabel setFont:[NSFont systemFontOfSize:10]];
 	[updatedAtLabel setTextColor:[NSColor grayColor]];
 	
-	if ([[LocationController sharedInstance] lastUpdateError]) {
-		[self configureViewForError:[[LocationController sharedInstance] lastUpdateError]];
-	} else if ([[LocationController sharedInstance] lastKnownLocation]) {
-		[self configureViewForLocation:[[LocationController sharedInstance] lastKnownLocation]];
+	if ([[SkyhookLocationController sharedInstance] lastUpdateError]) {
+		[self configureViewForError:[[SkyhookLocationController sharedInstance] lastUpdateError]];
+	} else if ([[SkyhookLocationController sharedInstance] lastKnownLocation]) {
+		[self configureViewForLocation:[[SkyhookLocationController sharedInstance] lastKnownLocation]];
 	}
 	// spinner will only animate if view is drawn
 	[locationSpinner performSelector:@selector(startAnimation:)
@@ -117,7 +117,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-	if ([object isEqual:[LocationController sharedInstance]]) {
+	if ([object isEqual:[SkyhookLocationController sharedInstance]]) {
 		BOOL locationUpdateInProgress = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
 		[self setLocationSpinnerForUpdateStatus:locationUpdateInProgress];
 	}

@@ -1,4 +1,4 @@
-#import "LocationController.h"
+#import "SkyhookLocationController.h"
 #import "wpsapi.h"
 #import "SkyhookApiKey.h"
 
@@ -12,7 +12,7 @@
 	#define LOCATION_INTERVAL 60
 #endif
 
-@interface LocationController(Private)
+@interface SkyhookLocationController(Private)
 
 - (void)fireNotificationForLocation:(Location *)location;
 - (void)fireNotificationForError:(NSError *)error;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation LocationController
+@implementation SkyhookLocationController
 
 @synthesize lastKnownLocation;
 @synthesize delegate;
@@ -209,9 +209,9 @@
 
 #pragma mark Singleton Methods
 
-static LocationController *sharedLocationController = nil;
+static SkyhookLocationController *sharedLocationController = nil;
 
-+ (LocationController *)sharedInstance {
++ (SkyhookLocationController *)sharedInstance {
 	@synchronized(self) {
 		if (sharedLocationController == nil) {
 			sharedLocationController = [[self alloc] init];

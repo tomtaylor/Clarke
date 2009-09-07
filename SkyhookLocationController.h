@@ -12,7 +12,7 @@
 #define UpdatedLocationNotification @"updatedLocationNotification"
 #define FailedLocationUpdateNotification @"failedLocationUpdateNotification"
 
-@interface LocationController : NSObject {
+@interface SkyhookLocationController : NSObject {
 	id delegate;
 	Location *lastKnownLocation;
 	NSError *lastUpdateError;
@@ -22,7 +22,7 @@
 	BOOL updateInProgress;
 }
 
-+ (LocationController *)sharedInstance;
++ (SkyhookLocationController *)sharedInstance;
 
 @property (readonly) Location *lastKnownLocation;
 @property (readonly) NSError *lastUpdateError;
