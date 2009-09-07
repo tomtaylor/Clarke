@@ -14,11 +14,10 @@
 #import "StatusMenuHeaderViewController.h"
 #import "RHSystemIdleTimer.h"
 
-@interface FirehookApplicationDelegate : NSObject <LocationControllerDelegate> {
+@interface FirehookApplicationDelegate : NSObject {
   LocationController *locationController;
   PreferencesWindowController *thePreferencesWindowController;
   FireEagleController *theFireEagleController;
-  NSTimer *locationUpdateTimer;
   
   RHSystemIdleTimer *systemIdleTimer;
   BOOL isIdle;

@@ -13,10 +13,11 @@
 #define FailedLocationUpdateNotification @"failedLocationUpdateNotification"
 
 @interface LocationController : NSObject {
-  id delegate;
-  Location *lastKnownLocation;
-  NSError *lastUpdateError;
-  BOOL updateInProgress;
+	id delegate;
+	Location *lastKnownLocation;
+	NSError *lastUpdateError;
+	NSTimer *locationUpdateTimer;
+	BOOL updateInProgress;
 }
 
 + (LocationController *)sharedInstance;
@@ -27,12 +28,8 @@
 @property (readonly) BOOL updateInProgress;
 
 - (void)refreshLocation;
-
-@end
-
-@protocol LocationControllerDelegate
-
-- (void)locationDidChange:(Location *)location;
+- (void)startUpdating;
+- (void)stopUpdating;
 
 @end
 
