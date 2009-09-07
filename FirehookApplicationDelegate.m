@@ -229,7 +229,7 @@
 - (void)timerBeginsIdling:(id)sender {
 	NSLog(@"Clarke began idling");
 	isIdle = YES;
-	[self killLocationRefreshTimer];
+	[locationController stopUpdating];
 }
 
 - (void)timerFinishedIdling:(id)sender {
@@ -237,7 +237,7 @@
 	isIdle = NO;
 	
 	if ([self shouldPauseUpdatesWhenIdle]) {
-		[locationController refreshLocation];
+		[locationController startUpdating];
 	}
 }
 

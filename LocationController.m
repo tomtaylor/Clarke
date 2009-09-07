@@ -26,6 +26,7 @@
 @synthesize delegate;
 @synthesize updateInProgress;
 @synthesize lastUpdateError;
+@synthesize isRunning;
 
 - (id)init {
 	self = [super init];
@@ -38,6 +39,8 @@
 			lastKnownLocation.coordinate = _coordinate;
 			lastKnownLocation.timestamp = [[NSUserDefaults standardUserDefaults] objectForKey:LastKnownLocationTimestampDefaultsKey];
 		}
+		needsToStop = NO;
+		isRunning = NO;
 	}
 	return self;
 }
@@ -58,11 +61,15 @@
 }
 
 - (void)startUpdating {
+	needsToStop = NO;
+	isRunning = YES;
 	[self refreshLocation];
 }
 
 - (void)stopUpdating {
 	[self killLocationRefreshTimer];
+	needsToStop = YES;
+	isRunning = NO;
 }
 
 - (void)refreshLocation {
@@ -77,7 +84,10 @@
 	[self willChangeValueForKey:@"updateInProgress"];
 	updateInProgress = NO;
 	[self didChangeValueForKey:@"updateInProgress"];	
-	[self rescheduleLocationRefreshTimer];
+	
+	if (!needsToStop) {
+		[self rescheduleLocationRefreshTimer];
+	}
 }
 
 - (void)refreshLocationInBackground {
@@ -148,8 +158,6 @@
 			[[NSUserDefaults standardUserDefaults] setObject:newLocation.timestamp forKey:LastKnownLocationTimestampDefaultsKey];
 			[[NSUserDefaults standardUserDefaults] synchronize];
 		}
-		
-		
 		
 		WPS_free_location(location); 
 	} else {

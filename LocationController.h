@@ -17,6 +17,8 @@
 	Location *lastKnownLocation;
 	NSError *lastUpdateError;
 	NSTimer *locationUpdateTimer;
+	BOOL isRunning;
+	BOOL needsToStop;
 	BOOL updateInProgress;
 }
 
@@ -26,6 +28,7 @@
 @property (readonly) NSError *lastUpdateError;
 @property (assign) id delegate;
 @property (readonly) BOOL updateInProgress;
+@property (readonly) BOOL isRunning;
 
 - (void)refreshLocation;
 - (void)startUpdating;

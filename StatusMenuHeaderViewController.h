@@ -14,4 +14,7 @@
 
 - (void)viewWillAppear;
 
+- (void)configureViewForLocation:(Location *)location;
+- (void)configureViewForError:(NSError *)error;
+
 @end
