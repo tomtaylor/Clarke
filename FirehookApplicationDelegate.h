@@ -8,14 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SkyhookLocationController.h"
+#import "CoreLocationController.h"
+
 #import "Location.h"
 #import "PreferencesWindowController.h"
 #import "FireEagleController.h"
 #import "StatusMenuHeaderViewController.h"
 #import "RHSystemIdleTimer.h"
+#import "Gestalt.h"
 
-@interface FirehookApplicationDelegate : NSObject {
-  SkyhookLocationController *locationController;
+@interface FirehookApplicationDelegate : NSObject <NSMenuDelegate> {
+  BaseLocationController *locationController;
+	
   PreferencesWindowController *thePreferencesWindowController;
   FireEagleController *theFireEagleController;
   
@@ -27,7 +31,7 @@
   StatusMenuHeaderViewController *theStatusHeaderViewController;
 }
 
-@property (readonly) SkyhookLocationController *locationController;
+@property (readonly) BaseLocationController *locationController;
 
 - (void)activateStatusMenu;
 - (void)locationDidChange:(NSNotification *)notification;

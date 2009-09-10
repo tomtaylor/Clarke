@@ -2,18 +2,15 @@
 #import "wpsapi.h"
 #import "SkyhookApiKey.h"
 
-#define LastKnownLocationLatitudeDefaultsKey @"lastKnownLocationLatitudeDefaultsKey"
-#define LastKnownLocationLongitudeDefaultsKey @"lastKnownLocationLongitudeDefaultsKey"
-#define LastKnownLocationTimestampDefaultsKey @"lastKnownLocationTimestampDefaultsKey"
-
 #ifdef DEBUG
-	#define LOCATION_INTERVAL 10
+#define LOCATION_INTERVAL 10
 #else
-	#define LOCATION_INTERVAL 60
+#define LOCATION_INTERVAL 60
 #endif
 
 @interface SkyhookLocationController(Private)
 
+- (void)refreshLocation;
 - (void)fireNotificationForLocation:(Location *)location;
 - (void)fireNotificationForError:(NSError *)error;
 - (NSString *)registeredUsername;
@@ -22,25 +19,10 @@
 
 @implementation SkyhookLocationController
 
-@synthesize lastKnownLocation;
-@synthesize delegate;
-@synthesize updateInProgress;
-@synthesize lastUpdateError;
-@synthesize isRunning;
-
 - (id)init {
 	self = [super init];
 	if (self != nil) {
-		if ([[NSUserDefaults standardUserDefaults] objectForKey:LastKnownLocationTimestampDefaultsKey]) {
-			lastKnownLocation = [[Location alloc] init];
-			CLLocationCoordinate2D _coordinate;
-			_coordinate.latitude = [[NSUserDefaults standardUserDefaults] floatForKey:LastKnownLocationLatitudeDefaultsKey];
-			_coordinate.longitude = [[NSUserDefaults standardUserDefaults] floatForKey:LastKnownLocationLongitudeDefaultsKey];
-			lastKnownLocation.coordinate = _coordinate;
-			lastKnownLocation.timestamp = [[NSUserDefaults standardUserDefaults] objectForKey:LastKnownLocationTimestampDefaultsKey];
-		}
 		needsToStop = NO;
-		isRunning = NO;
 	}
 	return self;
 }
@@ -73,18 +55,11 @@
 }
 
 - (void)refreshLocation {
-	[self willChangeValueForKey:@"updateInProgress"];
 	[self killLocationRefreshTimer];
-	updateInProgress = YES;
 	[self performSelectorInBackground:@selector(refreshLocationInBackground) withObject:nil];
-	[self didChangeValueForKey:@"updateInProgress"];
 }
 
 - (void)tidyAndScheduleNextRefresh {
-	[self willChangeValueForKey:@"updateInProgress"];
-	updateInProgress = NO;
-	[self didChangeValueForKey:@"updateInProgress"];	
-	
 	if (!needsToStop) {
 		[self rescheduleLocationRefreshTimer];
 	}
@@ -182,21 +157,15 @@
 - (void)locationDidMoveTo:(Location *)newLocation {
 	[lastUpdateError release];
 	lastUpdateError = nil;
-	[self willChangeValueForKey:@"updateInProgress"];
-	updateInProgress = NO;
 	[self fireNotificationForLocation:newLocation];
-	[self didChangeValueForKey:@"updateInProgress"];
 }
 
 - (void)locationUpdateFailedWithError:(NSError *)error {
 	[lastUpdateError release];
 	lastUpdateError = nil;
 	lastUpdateError = [error retain];
-	[self willChangeValueForKey:@"updateInProgress"];
-	updateInProgress = NO;
 	NSLog(@"Location update failed with error: %@", error);
 	[self fireNotificationForError:error];
-	[self didChangeValueForKey:@"updateInProgress"];
 }
 
 - (void)fireNotificationForLocation:(Location *)location {
@@ -206,19 +175,5 @@
 - (void)fireNotificationForError:(NSError *)error {
 	[[NSNotificationCenter defaultCenter] postNotificationName:FailedLocationUpdateNotification object:error];
 }
-
-#pragma mark Singleton Methods
-
-static SkyhookLocationController *sharedLocationController = nil;
-
-+ (SkyhookLocationController *)sharedInstance {
-	@synchronized(self) {
-		if (sharedLocationController == nil) {
-			sharedLocationController = [[self alloc] init];
-		}
-	}
-	return sharedLocationController;
-}
-
 
 @end

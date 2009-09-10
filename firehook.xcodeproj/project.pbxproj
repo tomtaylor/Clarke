@@ -22,6 +22,10 @@
 		E24BDBF80FB777080065CCD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24BDBF70FB777080065CCD3 /* Security.framework */; };
 		E24C5D090FC1EAED00BE3F84 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24C5D080FC1EAED00BE3F84 /* AboutView.xib */; };
 		E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */; };
+		E27A64041059520D0012F450 /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A64031059520D0012F450 /* CoreLocationController.m */; };
+		E27A640C105952D60012F450 /* BaseLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A640B105952D60012F450 /* BaseLocationController.m */; };
+		E27A6462105959D40012F450 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27A6461105959D40012F450 /* CoreLocation.framework */; };
+		E27A653610595B120012F450 /* Gestalt.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A653510595B120012F450 /* Gestalt.m */; };
 		E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E282FD060FE847E6008F1132 /* AXCVHandler.m */; };
 		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; };
 		E290C4020FA8F0CC0093018D /* SkyhookLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */; };
@@ -90,6 +94,13 @@
 		E24C5D080FC1EAED00BE3F84 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		E24C5D0D0FC1EC8400BE3F84 /* DSClickableURLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSClickableURLTextField.h; sourceTree = "<group>"; };
 		E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSClickableURLTextField.m; sourceTree = "<group>"; };
+		E27A64021059520D0012F450 /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
+		E27A64031059520D0012F450 /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
+		E27A640A105952D60012F450 /* BaseLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLocationController.h; sourceTree = "<group>"; };
+		E27A640B105952D60012F450 /* BaseLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLocationController.m; sourceTree = "<group>"; };
+		E27A6461105959D40012F450 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = /System/Library/Frameworks/CoreLocation.framework; sourceTree = "<absolute>"; };
+		E27A653410595B120012F450 /* Gestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gestalt.h; sourceTree = "<group>"; };
+		E27A653510595B120012F450 /* Gestalt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gestalt.m; sourceTree = "<group>"; };
 		E282FD050FE847E6008F1132 /* AXCVHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCVHandler.h; sourceTree = "<group>"; };
 		E282FD060FE847E6008F1132 /* AXCVHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCVHandler.m; sourceTree = "<group>"; };
 		E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwpsapi.dylib; sourceTree = "<group>"; };
@@ -141,6 +152,7 @@
 				E2F4550E0FBECC7200E975B2 /* CoreServices.framework in Frameworks */,
 				E20C43FF0FC469440075CADF /* IOKit.framework in Frameworks */,
 				E2CA09850FC9638D0001D1C5 /* Sparkle.framework in Frameworks */,
+				E27A6462105959D40012F450 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +162,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E27A6407105952BF0012F450 /* LocationController */,
 				E297BDB30FBF1A0000BE6AA9 /* Preferences */,
-				E290C4000FA8F0CC0093018D /* SkyhookLocationController.h */,
-				E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */,
 				E2235F7E0FAA4C1B002549BD /* FirehookApplicationDelegate.h */,
 				E2235F7F0FAA4C1B002549BD /* FirehookApplicationDelegate.m */,
 				E24BD5840FB6C78C0065CCD3 /* Location.h */,
@@ -168,6 +179,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E20C43FE0FC469440075CADF /* IOKit.framework */,
+				E27A6461105959D40012F450 /* CoreLocation.framework */,
 				E2CA09840FC9638D0001D1C5 /* Sparkle.framework */,
 				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
 				E24BDBF70FB777080065CCD3 /* Security.framework */,
@@ -206,7 +219,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				E20C43FE0FC469440075CADF /* IOKit.framework */,
 			);
 			name = firehook;
 			sourceTree = "<group>";
@@ -263,6 +275,19 @@
 			path = DSClickableURLTextField;
 			sourceTree = "<group>";
 		};
+		E27A6407105952BF0012F450 /* LocationController */ = {
+			isa = PBXGroup;
+			children = (
+				E290C4000FA8F0CC0093018D /* SkyhookLocationController.h */,
+				E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */,
+				E27A64021059520D0012F450 /* CoreLocationController.h */,
+				E27A64031059520D0012F450 /* CoreLocationController.m */,
+				E27A640A105952D60012F450 /* BaseLocationController.h */,
+				E27A640B105952D60012F450 /* BaseLocationController.m */,
+			);
+			name = LocationController;
+			sourceTree = "<group>";
+		};
 		E282FCBA0FE84581008F1132 /* AXCVHandler */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +340,8 @@
 				E20C43CA0FC467710075CADF /* RHSystemIdleTimer */,
 				E24C5D0B0FC1EC8400BE3F84 /* DSClickableURLTextField */,
 				E290C3F30FA8EE4D0093018D /* Skyhook */,
+				E27A653410595B120012F450 /* Gestalt.h */,
+				E27A653510595B120012F450 /* Gestalt.m */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -414,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "codesign -f -s 'Tom Taylor Code Signing Certificate' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
+			shellScript = "#codesign -f -s 'Tom Taylor Code Signing Certificate' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
 		};
 		E290C46C0FA901D70093018D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -427,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\ncp -f libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libwpsapi.dylib\"\n\ninstall_name_tool -change libwpsapi.dylib @loader_path/../Frameworks/libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "#mkdir \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\ncp -f libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libwpsapi.dylib\"\n\ninstall_name_tool -change libwpsapi.dylib @loader_path/../Frameworks/libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -451,6 +478,9 @@
 				E20C43CD0FC467710075CADF /* RHSystemIdleTimer.m in Sources */,
 				E29A444E0FC6C6AB009CB8BB /* NSDate+Helper.m in Sources */,
 				E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */,
+				E27A64041059520D0012F450 /* CoreLocationController.m in Sources */,
+				E27A640C105952D60012F450 /* BaseLocationController.m in Sources */,
+				E27A653610595B120012F450 /* Gestalt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,32 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Location.h"
+#import "BaseLocationController.h"
 
-#define UpdatedLocationNotification @"updatedLocationNotification"
-#define FailedLocationUpdateNotification @"failedLocationUpdateNotification"
-
-@interface SkyhookLocationController : NSObject {
-	id delegate;
-	Location *lastKnownLocation;
-	NSError *lastUpdateError;
-	NSTimer *locationUpdateTimer;
-	BOOL isRunning;
+@interface SkyhookLocationController : BaseLocationController {
 	BOOL needsToStop;
-	BOOL updateInProgress;
 }
-
-+ (SkyhookLocationController *)sharedInstance;
-
-@property (readonly) Location *lastKnownLocation;
-@property (readonly) NSError *lastUpdateError;
-@property (assign) id delegate;
-@property (readonly) BOOL updateInProgress;
-@property (readonly) BOOL isRunning;
-
-- (void)refreshLocation;
-- (void)startUpdating;
-- (void)stopUpdating;
 
 @end
 

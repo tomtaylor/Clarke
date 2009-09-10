@@ -29,8 +29,16 @@
 - (id) init {
 	self = [super init];
 	if (self != nil) {
-		locationController = [SkyhookLocationController sharedInstance];
-		locationController.delegate = self;
+		
+		unsigned major, minor, bugFix;
+    [[NSApplication sharedApplication] getSystemVersionMajor:&major minor:&minor bugFix:&bugFix];
+		if (major >= 10 && minor >= 6) {
+			locationController = [CoreLocationController sharedInstance];
+		} else {
+			locationController = [SkyhookLocationController sharedInstance];
+			locationController.delegate = self;
+		}
+		
 		thePreferencesWindowController = [[PreferencesWindowController alloc] init];
 		theStatusHeaderViewController = [[StatusMenuHeaderViewController alloc] init];
 		theFireEagleController = [FireEagleController sharedInstance];
@@ -120,7 +128,8 @@
 
 - (void)receiveWakeNote:(NSNotification*)note {
 	NSLog(@"Application woke from sleep - refreshing");
-	[locationController refreshLocation];
+	[locationController stopUpdating];
+	[locationController startUpdating];
 }
 
 - (void)activateStatusMenu {
@@ -229,7 +238,10 @@
 - (void)timerBeginsIdling:(id)sender {
 	NSLog(@"Clarke began idling");
 	isIdle = YES;
-	[locationController stopUpdating];
+	
+	if ([self shouldPauseUpdatesWhenIdle]) {
+		[locationController stopUpdating];
+	}
 }
 
 - (void)timerFinishedIdling:(id)sender {

@@ -3,7 +3,7 @@
 #import "GeneralPreferencesViewController.h"
 #import "AboutPreferencesViewController.h"
 
-@interface PreferencesWindowController : NSWindowController {
+@interface PreferencesWindowController : NSWindowController <NSToolbarDelegate> {
   FireEaglePreferencesViewController *theFireEaglePreferencesController;
   GeneralPreferencesViewController *theGeneralPreferencesController;
   AboutPreferencesViewController *theAboutPreferencesController;
