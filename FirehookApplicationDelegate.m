@@ -1,9 +1,15 @@
 #import "FirehookApplicationDelegate.h"
 
 #ifdef DEBUG
-#define IDLE_TIMEOUT 5
+#define IDLE_TIMEOUT 30
 #else
 #define IDLE_TIMEOUT 300
+#endif
+
+#ifdef DEBUG
+#define FIREEAGLE_INTERVAL 10
+#else
+#define FIREEAGLE_INTERVAL 300
 #endif
 
 @interface FirehookApplicationDelegate(Private)
@@ -163,7 +169,7 @@
 	[nearbyMenu release];
 	[nearbyItem release];
 	
-	if ([[SkyhookLocationController sharedInstance] lastKnownLocation] == nil) {
+	if ([locationController lastKnownLocation] == nil) {
 		[nearbyItem setEnabled:NO];
 	}
 	
@@ -181,17 +187,56 @@
 	[theMenu release];
 }
 
+- (void)startFireEagleUpdater {
+	if (![fireEagleUpdateTimer isValid] && [theFireEagleController hasAccessToken] && [locationController lastKnownLocation]) {
+		if (!([self shouldPauseUpdatesWhenIdle] && isIdle)) {
+			[theFireEagleController updateLocation:[locationController lastKnownLocation]];
+		}
+		[self scheduleFireEagleUpdateTimer];
+	}
+}
+
+- (void)stopFireEagleUpdater {
+	[self killFireEagleUpdateTimer];
+}
+
 - (void)locationDidChange:(NSNotification *)notification {
 	[nearbyItem setEnabled:YES];
 	Location *location = notification.object;
 	NSLog(@"Location did change: %@", location);
+	[self startFireEagleUpdater];
+}
+
+- (void)killFireEagleUpdateTimer {
+	[fireEagleUpdateTimer invalidate];
+	[fireEagleUpdateTimer release];
+	fireEagleUpdateTimer = nil;
+}
+
+- (void)scheduleFireEagleUpdateTimer {
+	[self killFireEagleUpdateTimer]; // ensure it's not running
 	
+	NSInteger updateInterval = FIREEAGLE_INTERVAL;
+	fireEagleUpdateTimer = [NSTimer timerWithTimeInterval:updateInterval 
+																								 target:self 
+																							 selector:@selector(fireEagleUpdateTimerDidFire) 
+																							 userInfo:nil 
+																								repeats:YES];
+	[[NSRunLoop currentRunLoop] addTimer:fireEagleUpdateTimer forMode:NSRunLoopCommonModes];
+	NSLog(@"Scheduled next Fire Eagle check & update for every %u seconds", FIREEAGLE_INTERVAL);
+}
+
+- (void)fireEagleUpdateTimerDidFire {
+	NSLog(@"Fire Eagle Update timer fired");
 	if ([theFireEagleController hasAccessToken]) {
 		if (!([self shouldPauseUpdatesWhenIdle] && isIdle)) {
-			[theFireEagleController updateLocation:location];
+			NSLog(@"Firing Fire Eagle Controller update.");
+			[theFireEagleController updateLocation:[locationController lastKnownLocation]];
 		}
+	} else {
+		[self killFireEagleUpdateTimer];
 	}
-}
+}	
 
 - (void)locationUpdateDidFail:(NSError *)error {
 	//[self rescheduleLocationRefreshTimer];
@@ -208,25 +253,25 @@
 }
 
 - (void)openFlickr {
-	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
+	Location *location = [locationController lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.flickr.com/nearby/%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openGoogleMaps {
-	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
+	Location *location = [locationController lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.google.com/?q=%f,%f", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openOpenStreetMap {
-	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
+	Location *location = [locationController lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=15&layers=B000FTF", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)openYahoo {
-	Location *location = [[SkyhookLocationController sharedInstance] lastKnownLocation];
+	Location *location = [locationController lastKnownLocation];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.yahoo.com/?lat=%f&lon=%f&zoom=16", location.coordinate.latitude, location.coordinate.longitude]];
 	[[NSWorkspace sharedWorkspace] openURL:url];
 }
@@ -239,18 +284,18 @@
 	NSLog(@"Clarke began idling");
 	isIdle = YES;
 	
-	if ([self shouldPauseUpdatesWhenIdle]) {
-		[locationController stopUpdating];
-	}
+//	if ([self shouldPauseUpdatesWhenIdle]) {
+//		[locationController stopUpdating];
+//	}
 }
 
 - (void)timerFinishedIdling:(id)sender {
 	NSLog(@"Clarke awoke from idling");
 	isIdle = NO;
 	
-	if ([self shouldPauseUpdatesWhenIdle]) {
-		[locationController startUpdating];
-	}
+//	if ([self shouldPauseUpdatesWhenIdle]) {
+//		[locationController startUpdating];
+//	}
 }
 
 - (BOOL)shouldPauseUpdatesWhenIdle {

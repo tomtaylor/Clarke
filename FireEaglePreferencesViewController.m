@@ -1,3 +1,4 @@
+#import "FirehookApplicationDelegate.h"
 #import "FireEaglePreferencesViewController.h"
 #import "FireEagleController.h"
 #import "SkyhookLocationController.h"
@@ -80,10 +81,8 @@
   [progressIndicator stopAnimation:self];
   [self.view replaceSubview:waitingForAuthorizationView with:loggedInView];
   
-  Location *lastKnownLocation = [[SkyhookLocationController sharedInstance] lastKnownLocation];
-  if (lastKnownLocation) {
-    [theFireEagleController updateLocation:lastKnownLocation];
-  }
+	FirehookApplicationDelegate *applicationDelegate = [[NSApplication sharedApplication] delegate];
+	[applicationDelegate startFireEagleUpdater];
 }
 
 - (void)accessTokenDidFailWithError:(NSError *)error {

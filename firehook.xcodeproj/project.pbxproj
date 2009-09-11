@@ -176,32 +176,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E20C43FE0FC469440075CADF /* IOKit.framework */,
-				E27A6461105959D40012F450 /* CoreLocation.framework */,
-				E2CA09840FC9638D0001D1C5 /* Sparkle.framework */,
-				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
-				E24BDBF70FB777080065CCD3 /* Security.framework */,
-				E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */,
-				E290C4300FA8F6050093018D /* Apple80211.framework */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */,
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +225,18 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				E20C43FE0FC469440075CADF /* IOKit.framework */,
+				E27A6461105959D40012F450 /* CoreLocation.framework */,
+				E2CA09840FC9638D0001D1C5 /* Sparkle.framework */,
+				E2F454EB0FBECBFA00E975B2 /* CoreServices.framework */,
+				E24BDBF70FB777080065CCD3 /* Security.framework */,
+				E24BD8710FB6FEF80065CCD3 /* OAuthConsumer.framework */,
+				E290C4300FA8F6050093018D /* Apple80211.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

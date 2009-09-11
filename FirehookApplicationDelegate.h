@@ -17,7 +17,7 @@
 #import "RHSystemIdleTimer.h"
 #import "Gestalt.h"
 
-@interface FirehookApplicationDelegate : NSObject <NSMenuDelegate> {
+@interface FirehookApplicationDelegate : NSObject <NSMenuDelegate, FireEagleControllerDelegate> {
   BaseLocationController *locationController;
 	
   PreferencesWindowController *thePreferencesWindowController;
@@ -25,6 +25,8 @@
   
   RHSystemIdleTimer *systemIdleTimer;
   BOOL isIdle;
+	
+	NSTimer *fireEagleUpdateTimer;
   
   NSStatusItem *theStatusItem;
   NSMenuItem *nearbyItem;

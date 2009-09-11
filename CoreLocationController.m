@@ -63,6 +63,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+	NSLog(@"Location Manager failed with errors: %@", error);
 	[[NSNotificationCenter defaultCenter] postNotificationName:FailedLocationUpdateNotification object:error];
 }
 
