@@ -78,7 +78,7 @@
 	[currentLocationLabel setStringValue:[NSString stringWithFormat:@"%0.4f, %0.4f", location.coordinate.latitude, location.coordinate.longitude]];
 	
 	NSString *timeString = [NSDate stringForDisplayFromDate:[location timestamp] prefixed:YES];  
-	[updatedAtLabel setStringValue:[NSString stringWithFormat:@"Last movement at %@", timeString]];
+	[updatedAtLabel setStringValue:[NSString stringWithFormat:@"%@", timeString]];
 }
 
 - (void)configureViewForError:(NSError *)error {

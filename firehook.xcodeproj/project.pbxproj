@@ -24,10 +24,10 @@
 		E24C5D100FC1EC8400BE3F84 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E24C5D0E0FC1EC8400BE3F84 /* DSClickableURLTextField.m */; };
 		E27A64041059520D0012F450 /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A64031059520D0012F450 /* CoreLocationController.m */; };
 		E27A640C105952D60012F450 /* BaseLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A640B105952D60012F450 /* BaseLocationController.m */; };
-		E27A6462105959D40012F450 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27A6461105959D40012F450 /* CoreLocation.framework */; };
+		E27A6462105959D40012F450 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27A6461105959D40012F450 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E27A653610595B120012F450 /* Gestalt.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A653510595B120012F450 /* Gestalt.m */; };
 		E282FD070FE847E6008F1132 /* AXCVHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E282FD060FE847E6008F1132 /* AXCVHandler.m */; };
-		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; };
+		E290C3F60FA8EE5D0093018D /* libwpsapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C3F40FA8EE5D0093018D /* libwpsapi.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E290C4020FA8F0CC0093018D /* SkyhookLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C4010FA8F0CC0093018D /* SkyhookLocationController.m */; };
 		E290C4310FA8F6050093018D /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290C4300FA8F6050093018D /* Apple80211.framework */; };
 		E297BD7E0FBF17B500BE6AA9 /* fireeagle-phoenix.png in Resources */ = {isa = PBXBuildFile; fileRef = E297BD7D0FBF17B500BE6AA9 /* fireeagle-phoenix.png */; };
@@ -454,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#mkdir \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\ncp -f libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libwpsapi.dylib\"\n\ninstall_name_tool -change libwpsapi.dylib @loader_path/../Frameworks/libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\ncp -f libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libwpsapi.dylib\"\n\ninstall_name_tool -change libwpsapi.dylib @loader_path/../Frameworks/libwpsapi.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -529,7 +529,9 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = Clarke;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -553,7 +555,9 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = Clarke;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
