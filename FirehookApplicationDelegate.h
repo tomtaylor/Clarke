@@ -26,7 +26,7 @@
   RHSystemIdleTimer *systemIdleTimer;
   BOOL isIdle;
 	
-	NSTimer *fireEagleUpdateTimer;
+NSTimer *fireEagleUpdateTimer;
   
   NSStatusItem *theStatusItem;
   NSMenuItem *nearbyItem;

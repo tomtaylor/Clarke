@@ -65,7 +65,7 @@
 	[systemIdleTimer setDelegate:self];
 	isIdle = NO;
 	
-	//[self registerURLHandler];
+	[self registerURLHandler];
 	[self configureDefaultSettings];
 	[self activateStatusMenu];
 	
@@ -83,10 +83,10 @@
 															 object: nil];
 }
 
-//- (void)registerURLHandler {
-//  NSAppleEventManager *appleEventManager = [NSAppleEventManager sharedAppleEventManager];
-//  [appleEventManager setEventHandler:self andSelector:@selector(handleGetURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
-//}
+- (void)registerURLHandler {
+  NSAppleEventManager *appleEventManager = [NSAppleEventManager sharedAppleEventManager];
+  [appleEventManager setEventHandler:self andSelector:@selector(handleGetURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
+}
 
 - (void)configureDefaultSettings {
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:@"YES", @"pauseUpdatesWhenIdle", nil]];
@@ -302,10 +302,13 @@
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"pauseUpdatesWhenIdle"];
 }
 
-//- (void)handleGetURLEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
-//{
-//  NSString *url = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
-//  NSLog(url);
-//}
+- (void)handleGetURLEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+{
+	NSString *url = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
+	NSLog(url);
+	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+	[[thePreferencesWindowController window] orderFrontRegardless];
+	[thePreferencesWindowController selectFireEagle:self];
+}
 
 @end
